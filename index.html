@@ -278,9 +278,9 @@
   main > section { position: relative; }
   main > section:not(:last-child)::after {
     content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-    width: min(1032px, calc(100% - 48px)); height: 1px;
-    background: linear-gradient(90deg, transparent, var(--line) 12%, var(--accent) 50%, var(--line) 88%, transparent);
-    opacity: .7; pointer-events: none;
+    width: min(1032px, calc(100% - 48px)); height: 2px; border-radius: 2px; z-index: 5;
+    background: linear-gradient(90deg, transparent, rgba(31,95,91,.35) 10%, var(--accent) 50%, rgba(31,95,91,.35) 90%, transparent);
+    pointer-events: none;
   }
 </style>
 </head>
