@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamille Aerron De Guzman | Marketing Operations Specialist</title>
+<meta name="description" content="Kamille Aerron De Guzman: remote marketing operations specialist for SaaS and online course businesses. Course migrations, help center content, customer success stories, GoHighLevel funnels and automation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1c1f24;
+    --muted: #5b6270;
+    --line: #e4e2dc;
+    --bg: #faf8f4;
+    --card: #ffffff;
+    --accent: #1f5f5b;
+    --accent-soft: #e3efed;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  a { color: var(--accent); }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  header.nav {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(250, 248, 244, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-weight: 700; text-decoration: none; color: var(--ink); }
+  .nav ul { list-style: none; display: flex; gap: 22px; margin: 0; padding: 0; }
+  .nav ul a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; }
+  .nav ul a:hover { color: var(--ink); }
+
+  section { padding: 72px 0; }
+  h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
+  h2 { font-size: 34px; margin: 0 0 8px; }
+  h3 { font-size: 19px; margin: 0 0 6px; }
+  .lead { color: var(--muted); max-width: 680px; margin: 0 0 36px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 10px; }
+
+  .hero { padding-top: 64px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: 46px; line-height: 1.12; margin: 0 0 14px; }
+  .hero p.role { font-size: 19px; font-weight: 600; margin: 0 0 16px; }
+  .hero p.summary { color: var(--muted); margin: 0 0 28px; }
+  .hero .photo { border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--accent-soft); }
+  .hero .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; text-decoration: none;
+    border: 1.5px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.ghost { color: var(--accent); background: transparent; }
+
+  .hero .wrap.stats-wrap { display: block; }
+  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 56px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 16px; }
+  .stat b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 30px; color: var(--accent); line-height: 1.1; }
+  .stat span { font-size: 14px; color: var(--muted); }
+
+  .timeline { display: grid; gap: 18px; }
+  .job { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+  .job .meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .job .when { color: var(--muted); font-size: 15px; }
+  .job .org { color: var(--muted); margin: 0 0 10px; font-size: 15px; }
+  .job ul { margin: 0; padding-left: 20px; }
+  .job li { margin: 4px 0; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: flex; flex-direction: column; }
+  .card p { color: var(--muted); margin: 0 0 14px; font-size: 16px; }
+  .card .link { margin-top: auto; font-weight: 600; font-size: 15px; text-decoration: none; }
+  .card .link:hover { text-decoration: underline; }
+  .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; margin-bottom: 12px; align-self: flex-start; }
+
+  .subhead { margin: 52px 0 18px; font-size: 22px; font-family: "Fraunces", Georgia, serif; }
+  .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  figure a { display: block; background: #111; }
+  figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
+  figcaption { padding: 14px 18px; font-size: 15px; color: var(--muted); }
+  figcaption b { color: var(--ink); display: block; font-size: 16px; }
+  figure.wide { grid-column: 1 / -1; }
+  figure.wide img { aspect-ratio: 2 / 1; object-fit: contain; background: #20232a; }
+
+  figure.tall img { aspect-ratio: 4 / 5; object-fit: cover; object-position: top; background: #fff; }
+  figure.tall.fit img { object-fit: contain; }
+  figure.wide.auto img { aspect-ratio: auto; object-fit: contain; background: #eceeed; }
+  .grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+  figcaption a { display: inline; background: none; font-weight: 600; text-decoration: none; white-space: nowrap; }  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+  .tools span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; color: var(--muted); }
+
+  .contact { background: var(--accent); color: #fff; border-radius: 24px; padding: 48px; text-align: center; }
+  .contact h2 { color: #fff; }
+  .contact p { color: #d6e7e4; margin: 0 auto 24px; max-width: 560px; }
+  .contact .btn.primary { background: #fff; color: var(--accent); border-color: #fff; }
+  .contact .btn.ghost { color: #fff; border-color: #fff; }
+
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
+
+  @media (max-width: 900px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero .photo { max-width: 320px; }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+    .grid, .services { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    .nav ul { display: none; }
+    .hero h1 { font-size: 36px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .grid, .grid.two, .services, .shots { grid-template-columns: 1fr; }
+    .contact { padding: 36px 22px; }
+    section { padding: 56px 0; }
+  }
+  /* DESIGN LAYER */
+  :root { --accent-2: #3f9a92; --peach: #f6d9c6; --mint: #cfe7e3; }
+  body { overflow-x: hidden; }
+
+  /* Page background: dot grid + soft color glows */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(circle at 1px 1px, rgba(31,95,91,.10) 1px, transparent 0) 0 0 / 26px 26px,
+      radial-gradient(900px 600px at 95% -5%, rgba(63,154,146,.16), transparent 60%),
+      radial-gradient(800px 600px at -10% 105%, rgba(246,217,198,.55), transparent 60%);
+  }
+
+  /* Scroll progress bar */
+  .fx-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 60;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2), #e8a27c); }
+
+  /* Header shadow once scrolled */
+  header.nav { transition: box-shadow .3s ease, background .3s ease; }
+  header.nav.scrolled { box-shadow: 0 6px 24px rgba(28,31,36,.07); background: rgba(250,248,244,.97); }
+  .nav ul a { position: relative; }
+  .nav ul a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px; background: var(--accent); transition: width .25s; }
+  .nav ul a:hover::after { width: 100%; }
+
+  /* Hero: floating blobs and decorative shapes */
+  .hero { position: relative; }
+  .hero::before, .hero::after {
+    content: ""; position: absolute; z-index: -1; border-radius: 50%; filter: blur(60px); pointer-events: none;
+    animation: float 14s ease-in-out infinite;
+  }
+  .hero::before { width: 420px; height: 420px; right: -80px; top: -60px; background: rgba(63,154,146,.22); }
+  .hero::after { width: 360px; height: 360px; left: -120px; top: 240px; background: rgba(246,217,198,.7); animation-delay: -7s; }
+  @keyframes float { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(24px,-20px) scale(1.06); } }
+
+  .hero .wrap:first-child { position: relative; }
+  .hero .wrap:first-child::after {
+    content: ""; position: absolute; right: -6px; bottom: -28px; width: 120px; height: 120px; z-index: -1;
+    background: radial-gradient(circle, var(--accent) 1.6px, transparent 2px) 0 0 / 14px 14px; opacity: .35;
+  }
+  .hero .wrap:first-child::before {
+    content: ""; position: absolute; right: 30%; top: -18px; width: 54px; height: 54px; border-radius: 50%;
+    border: 2px dashed rgba(31,95,91,.35); animation: spin 22s linear infinite; pointer-events: none;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .hero .photo {
+    box-shadow: 16px 16px 0 -2px var(--bg), 16px 16px 0 0 var(--accent), 0 24px 48px rgba(28,31,36,.14);
+    transition: transform .5s ease, box-shadow .5s ease;
+  }
+  .hero .photo:hover { transform: translate(-4px,-4px); box-shadow: 22px 22px 0 -2px var(--bg), 22px 22px 0 0 var(--accent), 0 30px 60px rgba(28,31,36,.18); }
+  .hero .photo img { transition: transform .8s ease; }
+  .hero .photo:hover img { transform: scale(1.04); }
+
+  .hero h1 { background: linear-gradient(100deg, var(--ink) 55%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .eyebrow::before { content: ""; display: inline-block; width: 24px; height: 2px; background: currentColor; vertical-align: middle; margin-right: 10px; }
+
+  .btn { transition: transform .2s ease, box-shadow .2s ease, background .2s, color .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 20px rgba(31,95,91,.25); }
+  .btn.primary:hover { box-shadow: 0 12px 26px rgba(31,95,91,.32); }
+  .btn.ghost:hover { background: var(--accent-soft); }
+
+  /* Stat boxes */
+  .stat { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
+  .stat::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2), #e8a27c); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
+  .stat::after { content: ""; position: absolute; right: -24px; bottom: -24px; width: 70px; height: 70px; border-radius: 50%; background: var(--accent-soft); opacity: .7; transition: transform .4s ease; }
+  .stat b, .stat span { position: relative; z-index: 1; }
+  .stat:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(31,95,91,.14); border-color: transparent; }
+  .stat:hover::before { transform: scaleX(1); }
+  .stat:hover::after { transform: scale(1.6); }
+
+  /* Section headings: small gradient underline */
+  section:not(.hero):not(#contact) h2::after {
+    content: ""; display: block; width: 56px; height: 4px; border-radius: 4px; margin-top: 12px;
+    background: linear-gradient(90deg, var(--accent), #e8a27c);
+  }
+
+  /* Experience cards */
+  .job { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
+  .job::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--accent), var(--accent-2)); transform: scaleY(0); transform-origin: top; transition: transform .4s ease; }
+  .job:hover { transform: translateX(4px); box-shadow: 0 12px 30px rgba(28,31,36,.08); }
+  .job:hover::before { transform: scaleY(1); }
+
+  /* Work section: tinted band with a wave edge */
+  #work { position: relative; background: linear-gradient(180deg, rgba(227,239,237,.75), rgba(227,239,237,.35)); }
+  #work::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -59px; height: 60px; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V30C240 0 480 0 720 26s480 30 720 4v30z' fill='%23e3efed' fill-opacity='.75'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  }
+  #work::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -59px; height: 60px; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 0v30c240 30 480 30 720 4S1200 0 1440 26V0z' fill='%23e3efed' fill-opacity='.35'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  }
+  .subhead { display: inline-flex; align-items: center; gap: 12px; }
+  .subhead::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: linear-gradient(135deg, var(--accent), #e8a27c); transform: rotate(45deg); }
+
+  figure { transition: transform .35s ease, box-shadow .35s ease; }
+  figure:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(28,31,36,.14); }
+  figure > a { overflow: hidden; }
+  figure img { transition: transform .7s ease; }
+  figure:hover img { transform: scale(1.035); }
+
+  /* Services cards */
+  .card { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
+  .card::before { content: ""; position: absolute; top: -40px; right: -40px; width: 110px; height: 110px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(63,154,146,.22), transparent 70%); transition: transform .5s ease; }
+  .card::after { content: ""; position: absolute; left: 22px; right: 22px; bottom: 0; height: 3px; border-radius: 3px 3px 0 0;
+    background: linear-gradient(90deg, var(--accent), #e8a27c); transform: scaleX(0); transition: transform .4s ease; }
+  .card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(31,95,91,.12); border-color: transparent; }
+  .card:hover::before { transform: scale(1.8); }
+  .card:hover::after { transform: scaleX(1); }
+  .tools span { transition: background .2s, color .2s, border-color .2s, transform .2s; }
+  .tools span:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
+
+  /* Contact banner: rings and pattern */
+  .contact { position: relative; overflow: hidden; isolation: isolate;
+    background: linear-gradient(135deg, var(--accent) 0%, #174a46 60%, #123b38 100%); }
+  .contact::before { content: ""; position: absolute; z-index: -1; width: 320px; height: 320px; right: -90px; top: -120px; border-radius: 50%;
+    border: 40px solid rgba(255,255,255,.06); box-shadow: 0 0 0 40px rgba(255,255,255,.03); }
+  .contact::after { content: ""; position: absolute; z-index: -1; left: -30px; bottom: -30px; width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,.22) 1.5px, transparent 2px) 0 0 / 16px 16px; opacity: .6; }
+  .contact .btn.primary { background: #fff; }
+
+  /* Scroll reveal */
+  .fx .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+  .fx .reveal.in { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    .hero .wrap:first-child::before { display: none; }
+    .hero .photo { box-shadow: 12px 12px 0 -2px var(--bg), 12px 12px 0 0 var(--accent), 0 20px 40px rgba(28,31,36,.12); }
+  }
+  @media (max-width: 640px) {
+    .hero::before { width: 280px; height: 280px; }
+    .hero::after { width: 240px; height: 240px; }
+    #work::before, #work::after { height: 34px; top: auto; }
+    #work::before { top: -33px; }
+    #work::after { bottom: -33px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .fx .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Kamille De Guzman</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Remote since 2021 · Philippines</p>
+        <h1>Kamille Aerron De Guzman</h1>
+        <p class="role">Digital Marketing and Operations Specialist</p>
+        <p class="summary">I run marketing operations for SaaS and online course businesses. At Tevello, a Shopify app for online courses and communities, I work directly with the founder on course migrations, help center content, customer success stories, the monthly newsletter and weekly SaaS reporting. Before that, I built GoHighLevel funnels and automations and onboarded clients onto a white-labeled GoHighLevel platform.</p>
+        <div class="btns">
+          <a class="btn primary" href="resume.html">View resume</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="photo">
+        <img src="images/0a3ca4527b514f6faa66c4d7bf53a1e9.jpg" alt="Portrait of Kamille Aerron De Guzman">
+      </div>
+    </div>
+    <div class="wrap stats-wrap">
+      <div class="stats">
+        <div class="stat"><b>13</b><span>platforms migrated into Shopify</span></div>
+        <div class="stat"><b>25</b><span>customers migrated</span></div>
+        <div class="stat"><b>52</b><span>help center articles written</span></div>
+        <div class="stat"><b>10</b><span>customer success stories</span></div>
+        <div class="stat"><b>9</b><span>lead generation funnels built</span></div>
+        <div class="stat"><b>800+</b><span>tasks completed with a founder</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I've worked</h2>
+      <p class="lead">Five years of remote marketing operations, all with founder-led SaaS and online education teams.</p>
+      <div class="timeline">
+        <div class="job">
+          <div class="meta"><h3>Digital Marketing and Operations Specialist</h3><span class="when">Mar 2024 - Present</span></div>
+          <p class="org">Tevello LLC (Shopify app for online courses and communities) · Remote</p>
+          <ul>
+            <li>Migrated courses into Tevello on Shopify from 13 platforms, including Kajabi, Teachable and Podia, for 25 customers. The largest covered 67 courses and 1,445 videos (1.12 TB).</li>
+            <li>Wrote all 52 published help center articles, with screenshots and tutorial videos on YouTube, plus internal SOPs and mobile app setup guides.</li>
+            <li>Wrote all 10 customer success stories on tevello.com, reused across newsletters and landing pages.</li>
+            <li>Built the weekly SaaS metrics and funnel report from Mantle and Google Sheets, which surfaced a subscription churn issue and led to a churn-reduction feature recommendation.</li>
+            <li>Write the monthly customer newsletter (since Nov 2024), which brought clients forward to test beta features and join success story interviews.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="meta"><h3>Digital Marketing Specialist and Client Success Manager</h3><span class="when">Jun 2022 - Mar 2024</span></div>
+          <p class="org">Enlightened Profits Pte. Ltd (Xfactor Method SaaS) · Remote</p>
+          <ul>
+            <li>Built 9 lead generation funnels, plus websites and landing pages, in GoHighLevel and Swipe Pages for webinar, coaching, apprenticeship and bootcamp programs.</li>
+            <li>Automated backend workflows in Zapier, GoHighLevel and ActiveCampaign, plus client reminders through Zapier, ChatDaddy and Discord.</li>
+            <li>Onboarded 10 new clients onto the Xfactor Method SaaS platform, a white-labeled GoHighLevel CRM, handling technical support and domain setup.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div class="meta"><h3>Digital Marketing Specialist</h3><span class="when">May 2021 - Feb 2022</span></div>
+          <p class="org">Storm The Capital · Remote</p>
+          <ul>
+            <li>Ran landing page A/B split tests in Unbounce and ClickFunnels and analyzed funnel drop-off with Hotjar and Mouseflow heatmaps.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <p class="eyebrow">Work samples</p>
+      <h2>Selected work</h2>
+      <p class="lead">Live work from Tevello, and funnel and automation builds from my time at Xfactor Method.</p>
+
+      <h3 class="subhead">Tevello</h3>
+      <div class="shots">
+        <figure>
+          <a href="https://help.tevello.com/en/" target="_blank" rel="noopener">
+            <img src="images/ccc3aa7cd38f493d93568e855cd219b0.jpg" alt="Tevello help center article with an embedded tutorial video" loading="lazy">
+          </a>
+          <figcaption><b>Help center articles</b>All 52 published articles across Get Started, Courses, Communities and Members, written with screenshots and tutorial videos. <a href="https://help.tevello.com/en/" target="_blank" rel="noopener">Read the help center →</a></figcaption>
+        </figure>
+        <figure>
+          <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">
+            <img src="images/630e6da23cd74a1f8b851fa9aafe548e.jpg" alt="Tevello Help Center tutorial video playlist on YouTube" loading="lazy">
+          </a>
+          <figcaption><b>Tutorial videos on YouTube</b>Step-by-step videos for the help center, posted to Tevello's YouTube channel. <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">Watch the playlist →</a></figcaption>
+        </figure>
+        <figure class="wide">
+          <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">
+            <img src="images/59bbda6987414e399ccb31ad26e0e7db.jpg" alt="Tevello success stories page" loading="lazy">
+          </a>
+          <figcaption><b>Customer success stories</b>All 10 success stories on tevello.com, written from client interviews and reused in newsletters and on landing pages. <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">Read the stories →</a></figcaption>
+        </figure>
+        <figure class="tall">
+          <a href="images/486174d780434be294daf7c5bb1ec073.png" target="_blank" rel="noopener">
+            <img src="images/486174d780434be294daf7c5bb1ec073.png" alt="Tevello monthly customer newsletter" loading="lazy">
+          </a>
+          <figcaption><b>Monthly customer newsletter</b>Written every month since Nov 2024: product tips, a feature spotlight and a customer case study. It brought clients forward to test beta features and join interviews. Click to see the full issue.</figcaption>
+        </figure>
+        <figure class="tall fit">
+          <a href="images/a4f5c14f59dd4ba1a0cb78e819d985bd.png" target="_blank" rel="noopener">
+            <img src="images/a4f5c14f59dd4ba1a0cb78e819d985bd.png" alt="Weekly SaaS metrics and funnel report with figures blurred" loading="lazy">
+          </a>
+          <figcaption><b>Weekly SaaS metrics and funnel report</b>Subscriptions, churn and MRR, plus the app listing to trial to paid funnel, built from Mantle and Google Sheets for the founder's weekly review. Figures blurred for confidentiality.</figcaption>
+        </figure>
+      </div>
+      <div class="shots" style="margin-top:18px">
+        <figure class="wide auto">
+          <a href="images/27c1e63313794a28b6ded08d97ef29c1.png" target="_blank" rel="noopener">
+            <img src="images/27c1e63313794a28b6ded08d97ef29c1.png" alt="Completed course migration tasks in Basecamp, client names blurred" loading="lazy">
+          </a>
+          <figcaption><b>Course migrations to Shopify</b>Courses moved into Tevello for 25 customers from 13 platforms, including Kajabi, Teachable, Podia, Courses Plus, LearnDash, WordPress, systeme.io, Zenler, ThriveCart, Webflow, Kartra and Thinkific. The largest covered 67 courses and 1,445 videos (1.12 TB). Shown: completed tasks in Basecamp, client names blurred.</figcaption>
+        </figure>
+      </div>
+      <div class="shots" style="margin-top:18px">
+        <figure class="wide auto">
+          <a href="images/544fa216600d408ca1046c98ba13bce4.png" target="_blank" rel="noopener">
+            <img src="images/544fa216600d408ca1046c98ba13bce4.png" alt="Claude workspace with projects, connectors and custom skills" loading="lazy">
+          </a>
+          <figcaption><b>AI-assisted operations</b>My Claude setup: projects for the newsletter, help desk, app listing report and case studies, connectors to Tevello, Shopify, Basecamp, Google Sheets, Canva and Metricool, and custom skills. Used with ChatGPT and MCP connectors for content drafting, integration testing and reporting.</figcaption>
+        </figure>
+      </div>
+
+      <h3 class="subhead">Xfactor Method: funnels and GoHighLevel automation</h3>
+      <div class="shots">
+        <figure class="wide">
+          <a href="images/6c3b78a93dfc48f18f9f0d2a39739045.png" target="_blank" rel="noopener">
+            <img src="images/6c3b78a93dfc48f18f9f0d2a39739045.png" alt="Collage of landing pages and websites built for Xfactor Method" loading="lazy">
+          </a>
+          <figcaption><b>Landing pages and websites</b>Pages built in GoHighLevel and Swipe Pages for Xfactor Method's webinars, programs and main site.</figcaption>
+        </figure>
+        <figure>
+          <a href="images/5d2435cd2d2248b797b8dd54e21f9752.gif" target="_blank" rel="noopener">
+            <img src="images/5d2435cd2d2248b797b8dd54e21f9752.gif" alt="GoHighLevel webinar registration workflow" loading="lazy">
+          </a>
+          <figcaption><b>Webinar registration workflow</b>Tags registrants, sends confirmation emails and branches reminders by session date.</figcaption>
+        </figure>
+        <figure>
+          <a href="images/0885c433cc4a48898d661b5e0e82aec3.gif" target="_blank" rel="noopener">
+            <img src="images/0885c433cc4a48898d661b5e0e82aec3.gif" alt="GoHighLevel bootcamp opt-in and abandoned checkout workflow" loading="lazy">
+          </a>
+          <figcaption><b>Bootcamp opt-in and abandoned checkout</b>Triggered by a form opt-in, adds contacts to a Facebook audience and follows up on unfinished checkouts.</figcaption>
+        </figure>
+        <figure>
+          <a href="images/8149b2b4fd064715bddc95535a160c9a.png" target="_blank" rel="noopener">
+            <img src="images/8149b2b4fd064715bddc95535a160c9a.png" alt="GoHighLevel bootcamp abandoned cart survey workflow" loading="lazy">
+          </a>
+          <figcaption><b>Abandoned cart survey</b>Logs survey answers from bootcamp cart abandoners to Google Sheets for follow-up.</figcaption>
+        </figure>
+        <figure>
+          <a href="images/c27f6571b6884c90b518018027a8af9a.png" target="_blank" rel="noopener">
+            <img src="images/c27f6571b6884c90b518018027a8af9a.png" alt="List of GoHighLevel workflows for the apprenticeship program" loading="lazy">
+          </a>
+          <figcaption><b>Apprenticeship program workflows</b>Interest, booking, onboarding and reminder workflows for one program, organised in a single folder.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2>How I can help</h2>
+      <p class="lead">Hands-on marketing operations for founder-led SaaS, course and coaching businesses.</p>
+      <div class="services">
+        <div class="card"><h3>Marketing operations and reporting</h3><p>Weekly KPI and funnel reports that show founders what changed and what needs attention.</p></div>
+        <div class="card"><h3>CRM and marketing automation</h3><p>GoHighLevel workflows for lead capture, tagging, confirmations and reminders.</p></div>
+        <div class="card"><h3>Funnels and landing pages</h3><p>Lead generation funnels and landing pages in GoHighLevel.</p></div>
+        <div class="card"><h3>Course and content migration</h3><p>Moving courses and members onto Shopify from Kajabi, Teachable, Podia and other platforms.</p></div>
+        <div class="card"><h3>Help center and SOPs</h3><p>Customer-facing help articles, tutorial videos and internal SOPs your team can follow.</p></div>
+        <div class="card"><h3>Customer marketing content</h3><p>Success stories, newsletters and social copy built from real customer results.</p></div>
+      </div>
+      <div class="tools">
+        <span>GoHighLevel</span><span>Shopify</span><span>ThriveCart</span><span>Mantle</span><span>Google Sheets</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Let's work together</h2>
+        <p>I'm open to remote marketing operations roles. Email me, or view my resume for the full details.</p>
+        <div class="btns" style="justify-content:center">
+          <a class="btn primary" href="mailto:kamilleaerron88@gmail.com">kamilleaerron88@gmail.com</a>
+          <a class="btn ghost" href="resume.html">View resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Kamille Aerron De Guzman · Nueva Ecija, Philippines</div>
+</footer>
+
+<div class="fx-progress" aria-hidden="true"></div>
+<script>
+(function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Scroll reveal
+  var targets = document.querySelectorAll("section:not(.hero) .eyebrow, section:not(.hero) h2, .lead, .job, .subhead, figure, .card, .tools, .contact");
+  if ("IntersectionObserver" in window && !reduce) {
+    root.classList.add("fx");
+    targets.forEach(function (el) { el.classList.add("reveal"); });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  // Count-up numbers in the stat boxes (final text is unchanged)
+  var nums = document.querySelectorAll(".stat b");
+  function countUp(el) {
+    var raw = el.textContent.trim();
+    var end = parseInt(raw, 10);
+    var suffix = raw.replace(/[0-9]/g, "");
+    if (isNaN(end)) return;
+    var start = null;
+    function step(t) {
+      if (!start) start = t;
+      var p = Math.min((t - start) / 1400, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+      if (p < 1) requestAnimationFrame(step); else el.textContent = raw;
+    }
+    requestAnimationFrame(step);
+  }
+  var stats = document.querySelector(".stats");
+  if (stats && "IntersectionObserver" in window && !reduce) {
+    var sio = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { nums.forEach(countUp); sio.disconnect(); }
+    }, { threshold: 0.4 });
+    sio.observe(stats);
+  }
+
+  // Progress bar and header shadow
+  var bar = document.querySelector(".fx-progress");
+  var header = document.querySelector("header.nav");
+  function onScroll() {
+    var max = root.scrollHeight - root.clientHeight;
+    bar.style.width = (max > 0 ? (root.scrollTop / max) * 100 : 0) + "%";
+    if (header) header.classList.toggle("scrolled", root.scrollTop > 10);
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+</body>
+</html>
