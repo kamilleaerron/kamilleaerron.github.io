@@ -273,6 +273,15 @@
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .fx .reveal { opacity: 1; transform: none; }
   }
+
+  /* Divider line between sections */
+  main > section { position: relative; }
+  main > section:not(:last-child)::after {
+    content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: min(1032px, calc(100% - 48px)); height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line) 12%, var(--accent) 50%, var(--line) 88%, transparent);
+    opacity: .7; pointer-events: none;
+  }
 </style>
 </head>
 <body>
