@@ -110,6 +110,12 @@
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 0; padding: 0; list-style: none; }
   .card .chips li { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 4px 11px; font-size: 13.5px; font-weight: 500; line-height: 1.4; }
+  .card .clabel { text-transform: uppercase; letter-spacing: .1em; font-size: 11px; font-weight: 700; color: var(--muted); margin: 0 0 9px; }
+  .card .does { list-style: none; margin: 0 0 18px; padding: 0; }
+  .card .does li { position: relative; padding-left: 15px; color: var(--muted); font-size: 15px; line-height: 1.5; margin-bottom: 5px; }
+  .card .does li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .45; }
+  .card .clabel.stack { margin-top: auto; }
+  .card .srcnote { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
   .prior { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
   .prior p { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
   .prior ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
@@ -512,50 +518,85 @@
     <div class="wrap">
       <p class="eyebrow">Skills and tools</p>
       <h2>What I work with</h2>
-      <p class="lead">The stack I use day to day right now, across Tevello and Bluewater Cruising.</p>
+      <p class="lead">What I do day to day, and the tools I do it in. This is the stack in use right now across Tevello and Bluewater Cruising.</p>
       <div class="skills-grid">
+
         <div class="card">
           <h3>CRM and marketing automation</h3>
-          <p>GoHighLevel workflow audits, segmentation and data cleanup for a membership business.</p>
-          <ul class="chips">
-            <li>GoHighLevel</li><li>Workflow automation</li><li>CRM management</li><li>CRM data cleanup</li><li>Smart lists and segmentation</li><li>Contact imports and bulk updates</li>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>GoHighLevel system audits: merging duplicate profiles, standardizing tags and custom fields</li>
+            <li>Segmenting members into smart lists by program</li>
+            <li>Contact imports and bulk field updates, with record counts matched</li>
+            <li>Auditing workflow enrollments and removing members who no longer belong</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>GoHighLevel</li><li>Google Sheets</li></ul>
         </div>
+
         <div class="card">
           <h3>Course platforms and migration</h3>
-          <p>Moving courses, members and checkout onto Shopify from the platforms creators are leaving.</p>
-          <ul class="chips">
-            <li>Shopify</li><li>Tevello</li><li>ThriveCart</li><li>Kajabi</li><li>Teachable</li><li>Podia</li><li>Course and content migration</li>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>Migrating courses, videos and members onto Shopify</li>
+            <li>Rebuilding course structure and content inside Tevello</li>
+            <li>Largest migration: 67 courses, 1,445 videos, 1.12 TB</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>Tevello</li><li>Shopify</li></ul>
+          <p class="srcnote">I export course content out of ThriveCart, Kajabi, Teachable and Podia, working in their course sections rather than the full products.</p>
         </div>
+
         <div class="card">
           <h3>Onboarding and documentation</h3>
-          <p>Customer onboarding plus the help articles, SOPs and tutorials that keep it repeatable.</p>
-          <ul class="chips">
-            <li>Customer onboarding</li><li>Help center and knowledge base content</li><li>SOP and process documentation</li><li>Tutorial videos</li><li>YouTube</li>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>Member onboarding and upgrades, working checklists from 6 templates</li>
+            <li>Verifying each member's data is correct and complete before handoff</li>
+            <li>Writing help center articles, internal SOPs and setup guides</li>
+            <li>Testing onboarding automations and logging the bugs I find</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>ClickUp</li><li>Google Sheets</li><li>GoHighLevel</li></ul>
         </div>
+
         <div class="card">
           <h3>Content and email</h3>
-          <p>The monthly newsletter, customer success stories and the creative that carries them.</p>
-          <ul class="chips">
-            <li>Email marketing and newsletters</li><li>Customer case studies</li><li>Copywriting</li><li>Content marketing</li><li>Canva</li><li>Metricool</li><li>LinkedIn and email outreach</li>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>Writing and publishing the monthly customer newsletter</li>
+            <li>Interviewing customers and writing success stories</li>
+            <li>Copywriting and campaign creative</li>
+            <li>Cold outreach and affiliate partner recruitment</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>Canva</li><li>Metricool</li><li>LinkedIn</li></ul>
         </div>
+
         <div class="card">
-          <h3>AI tools</h3>
-          <p>AI in the daily workflow for drafting, integration testing and reporting.</p>
-          <ul class="chips">
-            <li>Claude</li><li>ChatGPT</li><li>Model Context Protocol (MCP) connectors</li>
+          <h3>AI in daily work</h3>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>Drafting and editing content</li>
+            <li>Integration testing</li>
+            <li>Pulling and shaping data for reports</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>Claude</li><li>ChatGPT</li><li>MCP connectors</li></ul>
         </div>
+
         <div class="card">
           <h3>Operations and reporting</h3>
-          <p>Weekly KPI and SaaS metrics reporting, and the project tools the work runs in.</p>
-          <ul class="chips">
-            <li>KPI and funnel reporting</li><li>SaaS metrics reporting</li><li>Mantle</li><li>Google Sheets</li><li>Google Workspace</li><li>Basecamp</li><li>ClickUp</li><li>Project management</li>
+          <p class="clabel">What I do</p>
+          <ul class="does">
+            <li>Weekly SaaS metrics and funnel report, built from Mantle and Sheets data</li>
+            <li>Flagging what changed, like the churn issue that led to a feature recommendation</li>
+            <li>Coordinating marketing and operations directly with the founder</li>
           </ul>
+          <p class="clabel stack">Tools</p>
+          <ul class="chips"><li>Mantle</li><li>Google Sheets</li><li>ClickUp</li><li>Basecamp</li></ul>
         </div>
+
       </div>
       <div class="prior">
         <p>Used earlier in my career (2021-2024) to build funnels, automations and landing page tests. I haven't worked in them day to day since, and these platforms have moved on since:</p>
