@@ -108,12 +108,11 @@
   .card .link:hover { text-decoration: underline; }
   .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; margin-bottom: 12px; align-self: flex-start; }
 
-  .more { margin-top: 20px; }
-  .more > summary { cursor: pointer; font-weight: 600; color: var(--accent); font-size: 16px; padding: 10px 0; }
-  .more > summary:hover { text-decoration: underline; }
-  .more[open] > summary { margin-bottom: 14px; }
   .subhead { margin: 52px 0 18px; font-size: 22px; font-family: "Fraunces", Georgia, serif; }
-  .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .shots { display: block; perspective: 1500px; }
+  .shots > figure:first-child { margin-bottom: 26px; }
+  .rest { columns: 2; column-gap: 22px; perspective: 1500px; }
+  .rest > figure { break-inside: avoid; -webkit-column-break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 22px; }
   figure video.shot-vid { width: 100%; display: block; background: #0f1113; }
   figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
   figure a { display: block; background: #111; }
@@ -127,9 +126,7 @@
   figure.tall.fit img { object-fit: contain; }
   figure.wide.auto img { aspect-ratio: auto; object-fit: contain; background: #eceeed; }
   .grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
-  figcaption a { display: inline; background: none; font-weight: 600; text-decoration: none; white-space: nowrap; }  .offer > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); gap: 36px; padding: 32px 0; align-items: baseline; }
-  .offer h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(21px, 2.3vw, 29px); line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
-  .offer p { margin: 0; color: var(--muted); font-size: 17px; }
+  figcaption a { display: inline; background: none; font-weight: 600; text-decoration: none; white-space: nowrap; }  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 0; padding: 0; list-style: none; }
   .card .chips li { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 4px 11px; font-size: 13.5px; font-weight: 500; line-height: 1.4; }
@@ -146,6 +143,14 @@
   .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
   .tools span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; color: var(--muted); }
 
+  .marquee { margin: 46px 0 0; overflow: hidden; white-space: nowrap; max-width: 100%;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+  .track { display: inline-flex; gap: 12px; animation: slide 38s linear infinite; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee:hover .track { animation-play-state: paused; }
+  .track span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; font-size: 14.5px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
   .contact { background: var(--accent); color: #fff; border-radius: 24px; padding: 48px; text-align: center; }
   .contact h2 { color: #fff; }
   .contact p { color: #d6e7e4; margin: 0 auto 24px; max-width: 560px; }
@@ -159,7 +164,7 @@
     .hero .wrap { grid-template-columns: 1fr; }
     .hero .photo { max-width: 320px; }
 
-    .grid, .skills-grid { grid-template-columns: 1fr 1fr; }
+    .grid, .services, .skills-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
@@ -172,8 +177,8 @@
     .nav ul a.nav-resume { padding: 7px 12px; font-size: 13px; }
     .hero h1 { font-size: 36px; }
     .stats { grid-template-columns: 1fr; gap: 14px; }
-    .grid, .grid.two, .skills-grid, .shots { grid-template-columns: 1fr; }
-    .offer > div { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
+    .grid, .grid.two, .services, .skills-grid { grid-template-columns: 1fr; }
+    .rest { columns: 1; }
     .contact { padding: 36px 22px; }
     section { padding: 56px 0; }
   }
@@ -272,8 +277,8 @@
   .subhead { display: inline-flex; align-items: center; gap: 12px; }
   .subhead::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--accent); transform: rotate(45deg); }
 
-  figure { transition: transform .35s ease, box-shadow .35s ease; }
-  figure:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(28,31,36,.14); }
+  figure { transition: transform .5s cubic-bezier(.16,1,.3,1), box-shadow .5s ease; will-change: transform; }
+  figure:hover { transform: rotateX(2deg) rotateY(-2.2deg) scale(1.014); box-shadow: 0 26px 52px rgba(28,31,36,.17); }
   figure > a { overflow: hidden; }
   figure img { transition: transform .7s ease; }
   figure:hover img { transform: scale(1.035); }
@@ -298,8 +303,8 @@
   .contact .btn.primary { background: #fff; }
 
   /* Scroll reveal */
-  .fx .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
-  .fx .reveal.in { opacity: 1; transform: none; }
+  .fx .reveal { opacity: 0; translate: 0 28px; transition: opacity .8s ease, translate .8s cubic-bezier(.16,1,.3,1); }
+  .fx .reveal.in { opacity: 1; translate: 0 0; }
 
   @media (max-width: 900px) {
     .hero .wrap:first-child::before { display: none; }
@@ -314,7 +319,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
-    .fx .reveal { opacity: 1; transform: none; }
+    .fx .reveal { opacity: 1; translate: 0 0; }
   }
 
   /* Divider line between sections */
@@ -366,6 +371,9 @@
         <div class="stat"><b>52</b><span>help center articles written</span></div>
         <div class="stat"><b>13</b><span>platforms migrated from</span></div>
       </div>
+    </div>
+    <div class="wrap">
+      <div class="marquee"><div class="track"><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span></div></div>
     </div>
   </section>
 
@@ -436,22 +444,19 @@
           </a>
           <figcaption><b>Help center articles</b>All 52 published articles across Get Started, Courses, Communities and Members, written with screenshots and tutorial videos. <a href="https://help.tevello.com/en/" target="_blank" rel="noopener">Read the help center →</a></figcaption>
         </figure>
-        <figure class="tall fit">
+        <div class="rest">
+          <figure class="tall fit">
           <a href="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" target="_blank" rel="noopener">
             <img src="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" alt="Weekly SaaS metrics and funnel report with figures blurred" loading="lazy">
           </a>
           <figcaption><b>Weekly SaaS metrics and funnel report</b>Subscriptions, churn and MRR, plus the app listing to trial to paid funnel, built from Mantle and Google Sheets for the founder's weekly review. Figures blurred for confidentiality.</figcaption>
         </figure>
-        <figure class="wide auto">
+          <figure class="wide auto">
           <a href="images/27c1e63313794a28b6ded08d97ef29c1.png" target="_blank" rel="noopener">
             <img src="images/27c1e63313794a28b6ded08d97ef29c1.png" alt="Completed course migration tasks in Basecamp, client names blurred" loading="lazy">
           </a>
           <figcaption><b>Course migrations to Shopify</b>Courses moved into Tevello for 25 customers from 13 platforms, including Kajabi, Teachable, Podia, Courses Plus, LearnDash, WordPress, systeme.io, Zenler, ThriveCart, Webflow, Kartra and Thinkific. The largest covered 67 courses and 1,445 videos (1.12 TB). Shown: completed tasks in Basecamp, client names blurred.</figcaption>
         </figure>
-      </div>
-      <details class="more">
-        <summary>4 more from Tevello</summary>
-        <div class="shots" style="margin-top:18px">
           <figure>
           <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">
             <img src="images/630e6da23cd74a1f8b851fa9aafe548e.jpg" alt="Tevello Help Center tutorial video playlist on YouTube" loading="lazy">
@@ -477,7 +482,7 @@
           <figcaption><b>AI-assisted operations</b>My Claude setup: projects for the newsletter, help desk, app listing report and case studies, connectors to Tevello, Shopify, Basecamp, Google Sheets, Canva and Metricool, and custom skills. Used with ChatGPT and MCP connectors for content drafting, integration testing and reporting.</figcaption>
         </figure>
         </div>
-      </details>
+      </div>
 
       <h3 class="subhead">Bluewater Cruising: member onboarding and GoHighLevel support</h3>
       <div class="shots">
@@ -489,18 +494,20 @@
           <noscript><img src="images/bluewater-ghl-smart-lists.poster.jpg" alt="Screen recording of GoHighLevel smart lists for member programs, with contact details blurred"></noscript>
           <figcaption><b>GoHighLevel smart lists</b>Smart lists I worked on to segment members by program and year, with separate lists for partners. Each list runs on saved filters. Contact details are blurred.</figcaption>
         </figure>
-        <figure class="tall fit">
+        <div class="rest">
+          <figure class="tall fit">
           <a href="images/bluewater-onboarding-templates.png" target="_blank" rel="noopener">
             <img src="images/bluewater-onboarding-templates.png" alt="ClickUp list of six member onboarding templates with their checklist steps" loading="lazy">
           </a>
           <figcaption><b>Member onboarding templates in ClickUp</b>The 6 checklist templates behind my back-end onboarding work. I used them to check that each member's data was correct and complete in GoHighLevel.</figcaption>
         </figure>
-        <figure class="tall fit">
+          <figure class="tall fit">
           <a href="images/bluewater-clickup-tasks.png" target="_blank" rel="noopener">
             <img src="images/bluewater-clickup-tasks.png" alt="ClickUp tasks for workflow enrollment checks and automation bug reports, member name blurred" loading="lazy">
           </a>
           <figcaption><b>Workflow audits and automation testing</b>Tasks from my ClickUp list: checking GoHighLevel reminder enrollments for upgraded and offboarded members, and reporting onboarding automation bugs such as delayed or missed task completions.</figcaption>
         </figure>
+        </div>
       </div>
 
       <h3 class="subhead">Xfactor Method: media buying and ad reporting</h3>
@@ -511,22 +518,19 @@
           </a>
           <figcaption><b>Meta ad account</b>The Xfactor Method Meta ad account I ran campaigns in: 293 campaigns at account level, with results, frequency, reach, CPM, CPC, CTR and ThruPlays tracked per campaign. Campaign names are blurred.</figcaption>
         </figure>
-        <figure>
+        <div class="rest">
+          <figure>
           <a href="images/xfactor-meta-ad-reporting.png" target="_blank" rel="noopener">
             <img src="images/xfactor-meta-ad-reporting.png" alt="Meta ad reporting tab in the EP Marketing Reports sheet" loading="lazy">
           </a>
           <figcaption><b>Meta ad reporting</b>Ad-level reporting I kept in the marketing reports sheet: spend, leads, CPL, CPM, CTR, video hook rate and cost per ThruPlay, grouped by campaign and week.</figcaption>
         </figure>
-        <figure>
+          <figure>
           <a href="images/xfactor-youtube-ads-reporting.png" target="_blank" rel="noopener">
             <img src="images/xfactor-youtube-ads-reporting.png" alt="YouTube and Google ads reporting tab with view rate and watch time columns" loading="lazy">
           </a>
           <figcaption><b>YouTube and Google ad reporting</b>The same dashboard's Google and YouTube side: impressions, CPM, CPC, CPV, view rate, watch time and engagements, written up as a recurring report.</figcaption>
         </figure>
-      </div>
-      <details class="more">
-        <summary>1 more from media buying</summary>
-        <div class="shots" style="margin-top:18px">
           <figure>
           <a href="images/xfactor-ad-planning-sheet.png" target="_blank" rel="noopener">
             <img src="images/xfactor-ad-planning-sheet.png" alt="Ad planning sheet with audience, objective, budget, copy variants and UTM parameters" loading="lazy">
@@ -534,7 +538,7 @@
           <figcaption><b>Ad planning and UTM tracking</b>How each ad was briefed before launch: audience, objective, daily budget, body copy and headline variants, with UTM source, medium, campaign and content set per ad so results tied back to the report.</figcaption>
         </figure>
         </div>
-      </details>
+      </div>
 
       <h3 class="subhead">Xfactor Method: funnels and GoHighLevel automation</h3>
       <div class="shots">
@@ -544,7 +548,8 @@
           </a>
           <figcaption><b>Landing pages and websites</b>Pages built in GoHighLevel and Swipe Pages for Xfactor Method's webinars, programs and main site.</figcaption>
         </figure>
-        <figure>
+        <div class="rest">
+          <figure>
           <video class="shot-vid" autoplay loop muted playsinline preload="none"
                  poster="images/5d2435cd2d2248b797b8dd54e21f9752.poster.jpg" aria-label="GoHighLevel webinar registration workflow">
             <source src="images/5d2435cd2d2248b797b8dd54e21f9752.mp4" type="video/mp4">
@@ -552,10 +557,6 @@
           <noscript><img src="images/5d2435cd2d2248b797b8dd54e21f9752.poster.jpg" alt="GoHighLevel webinar registration workflow"></noscript>
           <figcaption><b>Webinar registration workflow</b>Tags registrants, sends confirmation emails and branches reminders by session date.</figcaption>
         </figure>
-      </div>
-      <details class="more">
-        <summary>3 more from Xfactor funnels and automation</summary>
-        <div class="shots" style="margin-top:18px">
           <figure>
           <video class="shot-vid" autoplay loop muted playsinline preload="none"
                  poster="images/0885c433cc4a48898d661b5e0e82aec3.poster.jpg" aria-label="GoHighLevel bootcamp opt-in and abandoned checkout workflow">
@@ -577,7 +578,7 @@
           <figcaption><b>Apprenticeship program workflows</b>Interest, booking, onboarding and reminder workflows for one program, organised in a single folder.</figcaption>
         </figure>
         </div>
-      </details>
+      </div>
     </div>
   </section>
 
@@ -677,13 +678,13 @@
     <div class="wrap">
       <h2>How I can help</h2>
       <p class="lead">Hands-on marketing operations for founder-led SaaS, online course, coaching and membership businesses. Remote, from the Philippines, working directly with founders and small teams.</p>
-      <div class="offer">
-        <div><h3>Operations management and SaaS reporting</h3><p>Weekly KPI, funnel and SaaS metrics reports that show founders what changed and what needs attention.</p></div>
-        <div><h3>CRM management and data cleanup</h3><p>GoHighLevel audits: merging duplicates, standardizing tags and fields, segmenting members and reconciling records against your sheets.</p></div>
-        <div><h3>Course migration and customer onboarding</h3><p>Moving courses and members onto Shopify from Kajabi, Teachable, Podia and other platforms, then onboarding them.</p></div>
-        <div><h3>Help center, SOPs and technical writing</h3><p>Customer-facing help articles, tutorial videos and internal SOPs your team can follow.</p></div>
-        <div><h3>Email marketing and customer stories</h3><p>Newsletters, customer success stories and social copy built from real customer results.</p></div>
-        <div><h3>Funnels and landing pages</h3><p>Lead generation funnels and landing pages in GoHighLevel.</p></div>
+      <div class="services">
+        <div class="card"><h3>Operations management and SaaS reporting</h3><p>Weekly KPI, funnel and SaaS metrics reports that show founders what changed and what needs attention.</p></div>
+        <div class="card"><h3>CRM management and data cleanup</h3><p>GoHighLevel audits: merging duplicates, standardizing tags and fields, segmenting members and reconciling records against your sheets.</p></div>
+        <div class="card"><h3>Course migration and customer onboarding</h3><p>Moving courses and members onto Shopify from Kajabi, Teachable, Podia and other platforms, then onboarding them.</p></div>
+        <div class="card"><h3>Help center, SOPs and technical writing</h3><p>Customer-facing help articles, tutorial videos and internal SOPs your team can follow.</p></div>
+        <div class="card"><h3>Email marketing and customer stories</h3><p>Newsletters, customer success stories and social copy built from real customer results.</p></div>
+        <div class="card"><h3>Funnels and landing pages</h3><p>Lead generation funnels and landing pages in GoHighLevel.</p></div>
       </div>
     </div>
   </section>
@@ -714,7 +715,7 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Scroll reveal
-  var targets = document.querySelectorAll("section:not(.hero) h2, .lead, .job, .subhead, figure, .card, .offer > div, .tools, .prior, .contact");
+  var targets = document.querySelectorAll("section:not(.hero) h2, .lead, .job, .subhead, figure, .card, .tools, .prior, .contact");
   if ("IntersectionObserver" in window && !reduce) {
     root.classList.add("fx");
     targets.forEach(function (el) { el.classList.add("reveal"); });
