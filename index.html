@@ -5,6 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kamille Aerron De Guzman | Marketing Operations &amp; CRM Specialist</title>
 <meta name="description" content="Remote marketing operations and CRM specialist for SaaS, online course and membership businesses. GoHighLevel CRM cleanup and workflow audits, course migration to Shopify from Kajabi and Teachable, help center content, customer onboarding and weekly SaaS reporting. Based in the Philippines.">
+<link rel="canonical" href="https://kamilleaerron.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#1f5f5b">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Kamille Aerron De Guzman">
+<meta property="og:url" content="https://kamilleaerron.github.io/">
+<meta property="og:title" content="Kamille Aerron De Guzman | Marketing Operations &amp; CRM Specialist">
+<meta property="og:description" content="Remote marketing operations and CRM specialist for SaaS, online course and membership businesses. GoHighLevel CRM cleanup, course migration to Shopify, help center content and SaaS reporting.">
+<meta property="og:image" content="https://kamilleaerron.github.io/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kamille Aerron De Guzman, Marketing Operations and CRM Specialist, remote from the Philippines">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kamille Aerron De Guzman | Marketing Operations &amp; CRM Specialist">
+<meta name="twitter:description" content="Remote marketing operations and CRM specialist for SaaS, online course and membership businesses. GoHighLevel CRM cleanup, course migration to Shopify, help center content and SaaS reporting.">
+<meta name="twitter:image" content="https://kamilleaerron.github.io/images/og-image.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
@@ -94,6 +110,7 @@
 
   .subhead { margin: 52px 0 18px; font-size: 22px; font-family: "Fraunces", Georgia, serif; }
   .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  figure video.shot-vid { width: 100%; display: block; background: #0f1113; }
   figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
   figure a { display: block; background: #111; }
   figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top; }
@@ -129,6 +146,7 @@
   .contact .btn.primary { background: #fff; color: var(--accent); border-color: #fff; }
   .contact .btn.ghost { color: #fff; border-color: #fff; }
 
+  #experience, #skills { background: rgba(255,255,255,.58); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
 
   @media (max-width: 900px) {
@@ -139,7 +157,12 @@
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
-    .nav ul li:not(.nav-cta) { display: none; }
+    .nav .wrap { gap: 10px; }
+    .brand { font-size: 15px; flex-shrink: 0; }
+    .nav ul li.sm-hide { display: none; }
+    .nav ul { gap: 14px; }
+    .nav ul a { font-size: 13.5px; white-space: nowrap; }
+    .nav ul a.nav-resume { padding: 7px 13px; }
     .hero h1 { font-size: 36px; }
     .stats { grid-template-columns: repeat(2, 1fr); }
     .grid, .grid.two, .services, .skills-grid, .shots { grid-template-columns: 1fr; }
@@ -306,10 +329,10 @@
   <div class="wrap">
     <a class="brand" href="#top">Kamille De Guzman</a>
     <ul>
-      <li><a href="#experience">Experience</a></li>
+      <li class="sm-hide"><a href="#experience">Experience</a></li>
       <li><a href="#work">Work</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#services">Services</a></li>
+      <li class="sm-hide"><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
       <li class="nav-cta"><a class="nav-resume" href="resume.html">Resume</a></li>
     </ul>
@@ -434,8 +457,8 @@
           <figcaption><b>Monthly customer newsletter</b>Written every month since Nov 2024: product tips, a feature spotlight and a customer case study. It brought clients forward to test beta features and join interviews. Click to see the full issue.</figcaption>
         </figure>
         <figure class="tall fit">
-          <a href="images/a4f5c14f59dd4ba1a0cb78e819d985bd.png" target="_blank" rel="noopener">
-            <img src="images/a4f5c14f59dd4ba1a0cb78e819d985bd.png" alt="Weekly SaaS metrics and funnel report with figures blurred" loading="lazy">
+          <a href="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" target="_blank" rel="noopener">
+            <img src="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" alt="Weekly SaaS metrics and funnel report with figures blurred" loading="lazy">
           </a>
           <figcaption><b>Weekly SaaS metrics and funnel report</b>Subscriptions, churn and MRR, plus the app listing to trial to paid funnel, built from Mantle and Google Sheets for the founder's weekly review. Figures blurred for confidentiality.</figcaption>
         </figure>
@@ -460,9 +483,11 @@
       <h3 class="subhead">Bluewater Cruising: member onboarding and GoHighLevel support</h3>
       <div class="shots">
         <figure class="wide">
-          <a href="images/bluewater-ghl-smart-lists.gif" target="_blank" rel="noopener">
-            <img src="images/bluewater-ghl-smart-lists.gif" alt="Screen recording of GoHighLevel smart lists for member programs, with contact details blurred" loading="lazy">
-          </a>
+          <video class="shot-vid" autoplay loop muted playsinline preload="none"
+                 poster="images/bluewater-ghl-smart-lists.poster.jpg" aria-label="Screen recording of GoHighLevel smart lists for member programs, with contact details blurred">
+            <source src="images/bluewater-ghl-smart-lists.mp4" type="video/mp4">
+          </video>
+          <noscript><img src="images/bluewater-ghl-smart-lists.poster.jpg" alt="Screen recording of GoHighLevel smart lists for member programs, with contact details blurred"></noscript>
           <figcaption><b>GoHighLevel smart lists</b>Smart lists I worked on to segment members by program and year, with separate lists for partners. Each list runs on saved filters. Contact details are blurred.</figcaption>
         </figure>
         <figure class="tall fit">
@@ -510,21 +535,25 @@
       <h3 class="subhead">Xfactor Method: funnels and GoHighLevel automation</h3>
       <div class="shots">
         <figure class="wide">
-          <a href="images/6c3b78a93dfc48f18f9f0d2a39739045.png" target="_blank" rel="noopener">
-            <img src="images/6c3b78a93dfc48f18f9f0d2a39739045.png" alt="Collage of landing pages and websites built for Xfactor Method" loading="lazy">
+          <a href="images/xfactor-landing-pages.jpg" target="_blank" rel="noopener">
+            <img src="images/xfactor-landing-pages.jpg" alt="Collage of landing pages and websites built for Xfactor Method" loading="lazy">
           </a>
           <figcaption><b>Landing pages and websites</b>Pages built in GoHighLevel and Swipe Pages for Xfactor Method's webinars, programs and main site.</figcaption>
         </figure>
         <figure>
-          <a href="images/5d2435cd2d2248b797b8dd54e21f9752.gif" target="_blank" rel="noopener">
-            <img src="images/5d2435cd2d2248b797b8dd54e21f9752.gif" alt="GoHighLevel webinar registration workflow" loading="lazy">
-          </a>
+          <video class="shot-vid" autoplay loop muted playsinline preload="none"
+                 poster="images/5d2435cd2d2248b797b8dd54e21f9752.poster.jpg" aria-label="GoHighLevel webinar registration workflow">
+            <source src="images/5d2435cd2d2248b797b8dd54e21f9752.mp4" type="video/mp4">
+          </video>
+          <noscript><img src="images/5d2435cd2d2248b797b8dd54e21f9752.poster.jpg" alt="GoHighLevel webinar registration workflow"></noscript>
           <figcaption><b>Webinar registration workflow</b>Tags registrants, sends confirmation emails and branches reminders by session date.</figcaption>
         </figure>
         <figure>
-          <a href="images/0885c433cc4a48898d661b5e0e82aec3.gif" target="_blank" rel="noopener">
-            <img src="images/0885c433cc4a48898d661b5e0e82aec3.gif" alt="GoHighLevel bootcamp opt-in and abandoned checkout workflow" loading="lazy">
-          </a>
+          <video class="shot-vid" autoplay loop muted playsinline preload="none"
+                 poster="images/0885c433cc4a48898d661b5e0e82aec3.poster.jpg" aria-label="GoHighLevel bootcamp opt-in and abandoned checkout workflow">
+            <source src="images/0885c433cc4a48898d661b5e0e82aec3.mp4" type="video/mp4">
+          </video>
+          <noscript><img src="images/0885c433cc4a48898d661b5e0e82aec3.poster.jpg" alt="GoHighLevel bootcamp opt-in and abandoned checkout workflow"></noscript>
           <figcaption><b>Bootcamp opt-in and abandoned checkout</b>Triggered by a form opt-in, adds contacts to a Facebook audience and follows up on unfinished checkouts.</figcaption>
         </figure>
         <figure>
@@ -688,6 +717,10 @@
       });
     }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
     targets.forEach(function (el) { io.observe(el); });
+    // Failsafe: never leave the page invisible if the observer does not fire
+    setTimeout(function () {
+      targets.forEach(function (el) { el.classList.add("in"); });
+    }, 1600);
   }
 
   // Count-up numbers in the stat boxes (final text is unchanged)
