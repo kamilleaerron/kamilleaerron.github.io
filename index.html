@@ -64,16 +64,16 @@
   .nav ul a.nav-resume:hover { color: #fff; opacity: .88; }
   .nav ul a.nav-resume::after { display: none; }
 
-  section { padding: 72px 0; }
+  section { padding: clamp(84px, 11vw, 150px) 0; }
   h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; letter-spacing: -0.01em; }
-  h2 { font-size: 34px; margin: 0 0 8px; }
+  h2 { font-size: clamp(34px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -0.025em; margin: 0 0 14px; }
   h3 { font-size: 19px; margin: 0 0 6px; }
-  .lead { color: var(--muted); max-width: 680px; margin: 0 0 36px; }
-  .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; font-size: 13px; font-weight: 600; color: var(--accent); margin: 0 0 10px; }
+  .lead { color: var(--muted); max-width: 620px; font-size: 19px; margin: 0 0 48px; }
+
 
   .hero { padding-top: 64px; }
   .hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
-  .hero h1 { font-size: 46px; line-height: 1.12; margin: 0 0 14px; }
+  .hero h1 { font-size: clamp(44px, 6.6vw, 82px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 18px; }
   .hero p.role { font-size: 19px; font-weight: 600; margin: 0 0 16px; }
   .hero p.summary { color: var(--muted); margin: 0 0 28px; }
   .hero .photo { border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 5; background: var(--accent-soft); }
@@ -88,7 +88,7 @@
   .btn.ghost { color: var(--accent); background: transparent; }
 
   .hero .wrap.stats-wrap { display: block; }
-  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-top: 56px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 72px; }
   .stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 16px; }
   .stat b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 30px; color: var(--accent); line-height: 1.1; }
   .stat span { font-size: 14px; color: var(--muted); }
@@ -123,7 +123,9 @@
   figure.tall.fit img { object-fit: contain; }
   figure.wide.auto img { aspect-ratio: auto; object-fit: contain; background: #eceeed; }
   .grid.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
-  figcaption a { display: inline; background: none; font-weight: 600; text-decoration: none; white-space: nowrap; }  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  figcaption a { display: inline; background: none; font-weight: 600; text-decoration: none; white-space: nowrap; }  .offer > div { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.15fr); gap: 36px; padding: 32px 0; align-items: baseline; }
+  .offer h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: clamp(21px, 2.3vw, 29px); line-height: 1.12; letter-spacing: -0.02em; margin: 0; }
+  .offer p { margin: 0; color: var(--muted); font-size: 17px; }
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card .chips { display: flex; flex-wrap: wrap; gap: 7px; margin: 4px 0 0; padding: 0; list-style: none; }
   .card .chips li { background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 4px 11px; font-size: 13.5px; font-weight: 500; line-height: 1.4; }
@@ -132,8 +134,8 @@
   .card .does li { position: relative; padding-left: 15px; color: var(--muted); font-size: 15px; line-height: 1.5; margin-bottom: 5px; }
   .card .does li::before { content: ""; position: absolute; left: 0; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); opacity: .45; }
   .card .clabel.stack { margin-top: auto; }
-  .card .srcnote { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 12px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
-  .prior { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .card .srcnote { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 14px 0 0; }
+  .prior { margin-top: 56px; }
   .prior p { color: var(--muted); font-size: 15px; margin: 0 0 12px; }
   .prior ul { display: flex; flex-wrap: wrap; gap: 7px; margin: 0; padding: 0; list-style: none; }
   .prior li { border: 1px dashed var(--line); color: var(--muted); border-radius: 999px; padding: 4px 11px; font-size: 13.5px; background: transparent; }
@@ -146,45 +148,45 @@
   .contact .btn.primary { background: #fff; color: var(--accent); border-color: #fff; }
   .contact .btn.ghost { color: #fff; border-color: #fff; }
 
-  #experience, #skills { background: rgba(255,255,255,.58); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  #experience, #skills { background: #fffdf9; }
   footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; text-align: center; }
 
   @media (max-width: 900px) {
     .hero .wrap { grid-template-columns: 1fr; }
     .hero .photo { max-width: 320px; }
-    .stats { grid-template-columns: repeat(3, 1fr); }
-    .grid, .services, .skills-grid { grid-template-columns: 1fr 1fr; }
+
+    .grid, .skills-grid { grid-template-columns: 1fr 1fr; }
   }
   @media (max-width: 640px) {
     body { font-size: 16px; }
-    .nav .wrap { gap: 10px; }
+    .nav .wrap { gap: 8px; padding: 0 16px; }
     .brand { font-size: 15px; flex-shrink: 0; }
+    .brand-rest { display: none; }
     .nav ul li.sm-hide { display: none; }
-    .nav ul { gap: 14px; }
-    .nav ul a { font-size: 13.5px; white-space: nowrap; }
-    .nav ul a.nav-resume { padding: 7px 13px; }
+    .nav ul { gap: 13px; }
+    .nav ul a { font-size: 13px; white-space: nowrap; }
+    .nav ul a.nav-resume { padding: 7px 12px; font-size: 13px; }
     .hero h1 { font-size: 36px; }
-    .stats { grid-template-columns: repeat(2, 1fr); }
-    .grid, .grid.two, .services, .skills-grid, .shots { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; gap: 14px; }
+    .grid, .grid.two, .skills-grid, .shots { grid-template-columns: 1fr; }
+    .offer > div { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
     .contact { padding: 36px 22px; }
     section { padding: 56px 0; }
   }
   /* DESIGN LAYER */
-  :root { --accent-2: #3f9a92; --peach: #f6d9c6; --mint: #cfe7e3; }
+  :root { --accent-2: #3f9a92; --mint: #cfe7e3; }
   body { overflow-x: hidden; }
 
   /* Page background: dot grid + soft color glows */
   body::before {
     content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
     background:
-      radial-gradient(circle at 1px 1px, rgba(31,95,91,.10) 1px, transparent 0) 0 0 / 26px 26px,
-      radial-gradient(900px 600px at 95% -5%, rgba(63,154,146,.16), transparent 60%),
-      radial-gradient(800px 600px at -10% 105%, rgba(246,217,198,.55), transparent 60%);
+      radial-gradient(circle at 1px 1px, rgba(31,95,91,.10) 1px, transparent 0) 0 0 / 26px 26px;
   }
 
   /* Scroll progress bar */
   .fx-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 60;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2), #e8a27c); }
+    background: var(--accent); }
 
   /* Header shadow once scrolled */
   header.nav { transition: box-shadow .3s ease, background .3s ease; }
@@ -215,26 +217,26 @@
   @keyframes spin { to { transform: rotate(360deg); } }
 
   .hero .photo {
-    box-shadow: 16px 16px 0 -2px var(--bg), 16px 16px 0 0 var(--accent), 0 24px 48px rgba(28,31,36,.14);
+    box-shadow: 16px 16px 0 -2px var(--bg), 16px 16px 0 0 var(--accent);
     transition: transform .5s ease, box-shadow .5s ease;
   }
-  .hero .photo:hover { transform: translate(-4px,-4px); box-shadow: 22px 22px 0 -2px var(--bg), 22px 22px 0 0 var(--accent), 0 30px 60px rgba(28,31,36,.18); }
+  .hero .photo:hover { transform: translate(-4px,-4px); box-shadow: 22px 22px 0 -2px var(--bg), 22px 22px 0 0 var(--accent); }
   .hero .photo img { transition: transform .8s ease; }
   .hero .photo:hover img { transform: scale(1.04); }
 
-  .hero h1 { background: linear-gradient(100deg, var(--ink) 55%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .eyebrow::before { content: ""; display: inline-block; width: 24px; height: 2px; background: currentColor; vertical-align: middle; margin-right: 10px; }
+  .hero h1 { color: var(--ink); }
+
 
   .btn { transition: transform .2s ease, box-shadow .2s ease, background .2s, color .2s; }
   .btn:hover { transform: translateY(-2px); }
-  .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); box-shadow: 0 8px 20px rgba(31,95,91,.25); }
-  .btn.primary:hover { box-shadow: 0 12px 26px rgba(31,95,91,.32); }
+  .btn.primary { background: var(--accent); }
+  .btn.primary:hover { background: #174946; }
   .btn.ghost:hover { background: var(--accent-soft); }
 
   /* Stat boxes */
   .stat { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
   .stat::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2), #e8a27c); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
+    background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; }
   .stat::after { content: ""; position: absolute; right: -24px; bottom: -24px; width: 70px; height: 70px; border-radius: 50%; background: var(--accent-soft); opacity: .7; transition: transform .4s ease; }
   .stat b, .stat span { position: relative; z-index: 1; }
   .stat:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(31,95,91,.14); border-color: transparent; }
@@ -244,17 +246,17 @@
   /* Section headings: small gradient underline */
   section:not(.hero):not(#contact) h2::after {
     content: ""; display: block; width: 56px; height: 4px; border-radius: 4px; margin-top: 12px;
-    background: linear-gradient(90deg, var(--accent), #e8a27c);
+    background: var(--accent);
   }
 
   /* Experience cards */
   .job { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease; }
-  .job::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--accent), var(--accent-2)); transform: scaleY(0); transform-origin: top; transition: transform .4s ease; }
+  .job::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--accent); transform: scaleY(0); transform-origin: top; transition: transform .4s ease; }
   .job:hover { transform: translateX(4px); box-shadow: 0 12px 30px rgba(28,31,36,.08); }
   .job:hover::before { transform: scaleY(1); }
 
   /* Work section: tinted band with a wave edge */
-  #work { position: relative; background: linear-gradient(180deg, rgba(227,239,237,.75), rgba(227,239,237,.35)); }
+  #work { position: relative; background: #eef5f3; }
   #work::before {
     content: ""; position: absolute; left: 0; right: 0; top: -59px; height: 60px; pointer-events: none;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 60V30C240 0 480 0 720 26s480 30 720 4v30z' fill='%23e3efed' fill-opacity='.75'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
@@ -264,7 +266,7 @@
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath d='M0 0v30c240 30 480 30 720 4S1200 0 1440 26V0z' fill='%23e3efed' fill-opacity='.35'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   }
   .subhead { display: inline-flex; align-items: center; gap: 12px; }
-  .subhead::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: linear-gradient(135deg, var(--accent), #e8a27c); transform: rotate(45deg); }
+  .subhead::before { content: ""; width: 10px; height: 10px; border-radius: 3px; background: var(--accent); transform: rotate(45deg); }
 
   figure { transition: transform .35s ease, box-shadow .35s ease; }
   figure:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(28,31,36,.14); }
@@ -274,19 +276,17 @@
 
   /* Services cards */
   .card { position: relative; overflow: hidden; transition: transform .3s ease, box-shadow .3s ease, border-color .3s; }
-  .card::before { content: ""; position: absolute; top: -40px; right: -40px; width: 110px; height: 110px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(63,154,146,.22), transparent 70%); transition: transform .5s ease; }
+
   .card::after { content: ""; position: absolute; left: 22px; right: 22px; bottom: 0; height: 3px; border-radius: 3px 3px 0 0;
-    background: linear-gradient(90deg, var(--accent), #e8a27c); transform: scaleX(0); transition: transform .4s ease; }
+    background: var(--accent); transform: scaleX(0); transition: transform .4s ease; }
   .card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(31,95,91,.12); border-color: transparent; }
-  .card:hover::before { transform: scale(1.8); }
   .card:hover::after { transform: scaleX(1); }
   .tools span { transition: background .2s, color .2s, border-color .2s, transform .2s; }
   .tools span:hover { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-2px); }
 
   /* Contact banner: rings and pattern */
   .contact { position: relative; overflow: hidden; isolation: isolate;
-    background: linear-gradient(135deg, var(--accent) 0%, #174a46 60%, #123b38 100%); }
+    background: var(--accent); }
   .contact::before { content: ""; position: absolute; z-index: -1; width: 320px; height: 320px; right: -90px; top: -120px; border-radius: 50%;
     border: 40px solid rgba(255,255,255,.06); box-shadow: 0 0 0 40px rgba(255,255,255,.03); }
   .contact::after { content: ""; position: absolute; z-index: -1; left: -30px; bottom: -30px; width: 200px; height: 200px;
@@ -318,7 +318,7 @@
   main > section:not(:last-child)::after {
     content: ""; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
     width: min(1032px, calc(100% - 48px)); height: 2px; border-radius: 2px; z-index: 5;
-    background: linear-gradient(90deg, transparent, rgba(31,95,91,.35) 10%, var(--accent) 50%, rgba(31,95,91,.35) 90%, transparent);
+    background: var(--accent);
     pointer-events: none;
   }
 </style>
@@ -327,7 +327,7 @@
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top">Kamille De Guzman</a>
+    <a class="brand" href="#top">Kamille<span class="brand-rest"> De Guzman</span></a>
     <ul>
       <li class="sm-hide"><a href="#experience">Experience</a></li>
       <li><a href="#work">Work</a></li>
@@ -344,10 +344,9 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Remote since 2021 · Philippines</p>
         <h1>Kamille Aerron De Guzman</h1>
-        <p class="role">Digital Marketing and Operations Specialist</p>
-        <p class="summary">I run marketing operations for SaaS and online course businesses. At Tevello, a Shopify app for online courses and communities, I work directly with the founder on course migrations, help center content, customer success stories, the monthly newsletter and weekly SaaS reporting. Part-time, I also supported GoHighLevel CRM and member onboarding for Bluewater Cruising. Before that, I onboarded clients onto a white-labeled GoHighLevel platform.</p>
+        <p class="role">Digital Marketing and Operations Specialist &middot; Remote from the Philippines</p>
+        <p class="summary">I run marketing operations for founder-led SaaS and online course businesses &mdash; course migrations onto Shopify, help center content, customer stories, and the weekly numbers behind them.</p>
         <div class="btns">
           <a class="btn primary" href="resume.html">View resume</a>
           <a class="btn ghost" href="#contact">Get in touch</a>
@@ -359,19 +358,15 @@
     </div>
     <div class="wrap stats-wrap">
       <div class="stats">
-        <div class="stat"><b>13</b><span>platforms migrated into Shopify</span></div>
-        <div class="stat"><b>25</b><span>customers migrated</span></div>
+        <div class="stat"><b>25</b><span>customers migrated onto Shopify</span></div>
         <div class="stat"><b>52</b><span>help center articles written</span></div>
-        <div class="stat"><b>10</b><span>customer success stories</span></div>
-        <div class="stat"><b>9</b><span>lead generation funnels built</span></div>
-        <div class="stat"><b>800+</b><span>tasks completed with a founder</span></div>
+        <div class="stat"><b>13</b><span>platforms migrated from</span></div>
       </div>
     </div>
   </section>
 
   <section id="experience">
     <div class="wrap">
-      <p class="eyebrow">Experience</p>
       <h2>Where I've worked</h2>
       <p class="lead">Five years of remote marketing operations with founder-led SaaS, online education and membership teams.</p>
       <div class="timeline">
@@ -426,7 +421,6 @@
 
   <section id="work">
     <div class="wrap">
-      <p class="eyebrow">Work samples</p>
       <h2>Selected work</h2>
       <p class="lead">Live work from Tevello, onboarding and GoHighLevel systems support for Bluewater Cruising, and media buying, funnel and automation builds from my time at Xfactor Method.</p>
 
@@ -574,7 +568,6 @@
 
   <section id="skills">
     <div class="wrap">
-      <p class="eyebrow">Skills and tools</p>
       <h2>What I work with</h2>
       <p class="lead">What I do day to day, and the tools I do it in. This is the stack in use right now across Tevello and Bluewater Cruising.</p>
       <div class="skills-grid">
@@ -667,16 +660,15 @@
 
   <section id="services">
     <div class="wrap">
-      <p class="eyebrow">Services</p>
       <h2>How I can help</h2>
       <p class="lead">Hands-on marketing operations for founder-led SaaS, online course, coaching and membership businesses. Remote, from the Philippines, working directly with founders and small teams.</p>
-      <div class="services">
-        <div class="card"><h3>Operations management and SaaS reporting</h3><p>Weekly KPI, funnel and SaaS metrics reports that show founders what changed and what needs attention.</p></div>
-        <div class="card"><h3>CRM management and data cleanup</h3><p>GoHighLevel audits: merging duplicates, standardizing tags and fields, segmenting members and reconciling records against your sheets.</p></div>
-        <div class="card"><h3>Funnels and landing pages</h3><p>Lead generation funnels and landing pages in GoHighLevel.</p></div>
-        <div class="card"><h3>Course migration and customer onboarding</h3><p>Moving courses and members onto Shopify from Kajabi, Teachable, Podia and other platforms, then onboarding them.</p></div>
-        <div class="card"><h3>Help center, SOPs and technical writing</h3><p>Customer-facing help articles, tutorial videos and internal SOPs your team can follow.</p></div>
-        <div class="card"><h3>Email marketing and customer stories</h3><p>Newsletters, customer success stories and social copy built from real customer results.</p></div>
+      <div class="offer">
+        <div><h3>Operations management and SaaS reporting</h3><p>Weekly KPI, funnel and SaaS metrics reports that show founders what changed and what needs attention.</p></div>
+        <div><h3>CRM management and data cleanup</h3><p>GoHighLevel audits: merging duplicates, standardizing tags and fields, segmenting members and reconciling records against your sheets.</p></div>
+        <div><h3>Course migration and customer onboarding</h3><p>Moving courses and members onto Shopify from Kajabi, Teachable, Podia and other platforms, then onboarding them.</p></div>
+        <div><h3>Help center, SOPs and technical writing</h3><p>Customer-facing help articles, tutorial videos and internal SOPs your team can follow.</p></div>
+        <div><h3>Email marketing and customer stories</h3><p>Newsletters, customer success stories and social copy built from real customer results.</p></div>
+        <div><h3>Funnels and landing pages</h3><p>Lead generation funnels and landing pages in GoHighLevel.</p></div>
       </div>
     </div>
   </section>
@@ -707,7 +699,7 @@
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Scroll reveal
-  var targets = document.querySelectorAll("section:not(.hero) .eyebrow, section:not(.hero) h2, .lead, .job, .subhead, figure, .card, .tools, .prior, .contact");
+  var targets = document.querySelectorAll("section:not(.hero) h2, .lead, .job, .subhead, figure, .card, .offer > div, .tools, .prior, .contact");
   if ("IntersectionObserver" in window && !reduce) {
     root.classList.add("fx");
     targets.forEach(function (el) { el.classList.add("reveal"); });
