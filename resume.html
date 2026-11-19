@@ -13,29 +13,64 @@
 <meta property="og:image" content="https://kamilleaerron.github.io/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kamilleaerron.github.io/images/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
 <style>
-  body { font-family: Arial, Helvetica, sans-serif; color: #1c1f24; background: #f4f2ee; margin: 0; line-height: 1.45; font-size: 14.5px; }
-  .bar { max-width: 820px; margin: 0 auto; padding: 18px 24px 0; display: flex; gap: 10px; justify-content: space-between; align-items: center; }
-  .bar a, .bar button { font: 600 14px Arial, sans-serif; color: #1f5f5b; background: none; border: 1.5px solid #1f5f5b; border-radius: 999px; padding: 8px 16px; cursor: pointer; text-decoration: none; }
-  .bar button { background: #1f5f5b; color: #fff; }
-  .page { max-width: 820px; margin: 16px auto 40px; background: #fff; padding: 48px 56px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-  h1 { font-size: 26px; margin: 0 0 4px; }
-  .headline { font-weight: 700; margin: 0 0 6px; }
-  .contact { color: #4a505c; margin: 0 0 18px; }
-  h2 { font-size: 15px; text-transform: uppercase; letter-spacing: .06em; border-bottom: 1.5px solid #1f5f5b; color: #1f5f5b; padding-bottom: 3px; margin: 20px 0 10px; }
-  .role { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
-  .role b { font-size: 15px; }
-  .role span { color: #4a505c; white-space: nowrap; }
-  ul { margin: 6px 0 0; padding-left: 18px; }
-  li { margin: 3px 0; }
+  :root { --ink:#1c1f24; --muted:#5b6270; --line:#e4e2dc; --bg:#faf8f4; --card:#ffffff; --accent:#1f5f5b; }
+  * { box-sizing: border-box; }
+  body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); background: var(--bg);
+         margin: 0; line-height: 1.55; font-size: 15px; }
+
+  /* the page's dot grid, same as the portfolio */
+  body { background-image: radial-gradient(circle at 1px 1px, rgba(31,95,91,.10) 1px, transparent 0); background-size: 26px 26px; }
+
+  .bar { max-width: 860px; margin: 0 auto; padding: 22px 24px 0; display: flex; gap: 10px;
+         justify-content: space-between; align-items: center; }
+  .bar a, .bar button { font: 600 14px "Inter", sans-serif; color: var(--accent); background: none;
+         border: 1.5px solid var(--accent); border-radius: 999px; padding: 9px 18px; cursor: pointer;
+         text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+  .bar a:hover { background: var(--accent); color: #fff; }
+  .bar button { background: var(--accent); color: #fff; }
+  .bar button:hover { transform: translateY(-1px); }
+
+  .page { max-width: 860px; margin: 20px auto 56px; background: var(--card);
+          border: 1px solid var(--line); border-radius: 14px; padding: 54px 60px; }
+
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 38px;
+       letter-spacing: -.03em; line-height: 1.05; margin: 0 0 8px; }
+  .headline { font-weight: 600; font-size: 17px; margin: 0 0 6px; }
+  .contact { color: var(--muted); margin: 0 0 6px; font-size: 15px; }
+
+  h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 21px; letter-spacing: -.02em;
+       color: var(--accent); text-transform: none; border-bottom: 1px solid var(--line);
+       padding-bottom: 8px; margin: 34px 0 14px; }
+
+  .role { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+  .role b { font-size: 15.5px; font-weight: 600; }
+  .role span { color: var(--muted); white-space: nowrap; font-size: 14px; }
+  ul { margin: 8px 0 0; padding-left: 19px; }
+  li { margin: 5px 0; color: var(--muted); }
+  li b { color: var(--ink); }
   p { margin: 0; }
+  a { color: var(--accent); }
+
   @media print {
-    body { background: #fff; font-size: 11pt; }
+    body { background: #fff; background-image: none; font-size: 10.5pt; color: #000; line-height: 1.4; }
     .bar { display: none; }
-    .page { box-shadow: none; margin: 0; padding: 0; max-width: none; }
-    @page { margin: 16mm; }
+    .page { border: 0; border-radius: 0; margin: 0; padding: 0; max-width: none; }
+    h1 { font-size: 22pt; }
+    h2 { font-size: 12pt; margin: 14pt 0 6pt; color: #1f5f5b; }
+    li, .contact, .role span { color: #222; }
+    li { margin: 2pt 0; }
+    .role { margin-top: 10pt; }
+    @page { margin: 15mm; }
   }
-  @media (max-width: 640px) { .page { padding: 28px 20px; } }
+  @media (max-width: 640px) {
+    .page { padding: 30px 22px; border-radius: 0; border-left: 0; border-right: 0; }
+    h1 { font-size: 30px; }
+    .bar { padding: 16px 16px 0; }
+  }
 </style>
 </head>
 <body>
