@@ -108,6 +108,10 @@
   .card .link:hover { text-decoration: underline; }
   .tag { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 600; border-radius: 999px; padding: 3px 10px; margin-bottom: 12px; align-self: flex-start; }
 
+  .more { margin-top: 20px; }
+  .more > summary { cursor: pointer; font-weight: 600; color: var(--accent); font-size: 16px; padding: 10px 0; }
+  .more > summary:hover { text-decoration: underline; }
+  .more[open] > summary { margin-bottom: 14px; }
   .subhead { margin: 52px 0 18px; font-size: 22px; font-family: "Fraunces", Georgia, serif; }
   .shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
   figure video.shot-vid { width: 100%; display: block; background: #0f1113; }
@@ -432,32 +436,12 @@
           </a>
           <figcaption><b>Help center articles</b>All 52 published articles across Get Started, Courses, Communities and Members, written with screenshots and tutorial videos. <a href="https://help.tevello.com/en/" target="_blank" rel="noopener">Read the help center →</a></figcaption>
         </figure>
-        <figure>
-          <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">
-            <img src="images/630e6da23cd74a1f8b851fa9aafe548e.jpg" alt="Tevello Help Center tutorial video playlist on YouTube" loading="lazy">
-          </a>
-          <figcaption><b>Tutorial videos on YouTube</b>Step-by-step videos for the help center, posted to Tevello's YouTube channel. <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">Watch the playlist →</a></figcaption>
-        </figure>
-        <figure class="wide">
-          <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">
-            <img src="images/59bbda6987414e399ccb31ad26e0e7db.jpg" alt="Tevello success stories page" loading="lazy">
-          </a>
-          <figcaption><b>Customer success stories</b>All 10 success stories on tevello.com, written from client interviews and reused in newsletters and on landing pages. <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">Read the stories →</a></figcaption>
-        </figure>
-        <figure class="tall">
-          <a href="images/486174d780434be294daf7c5bb1ec073.png" target="_blank" rel="noopener">
-            <img src="images/486174d780434be294daf7c5bb1ec073.png" alt="Tevello monthly customer newsletter" loading="lazy">
-          </a>
-          <figcaption><b>Monthly customer newsletter</b>Written every month since Nov 2024: product tips, a feature spotlight and a customer case study. It brought clients forward to test beta features and join interviews. Click to see the full issue.</figcaption>
-        </figure>
         <figure class="tall fit">
           <a href="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" target="_blank" rel="noopener">
             <img src="images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg" alt="Weekly SaaS metrics and funnel report with figures blurred" loading="lazy">
           </a>
           <figcaption><b>Weekly SaaS metrics and funnel report</b>Subscriptions, churn and MRR, plus the app listing to trial to paid funnel, built from Mantle and Google Sheets for the founder's weekly review. Figures blurred for confidentiality.</figcaption>
         </figure>
-      </div>
-      <div class="shots" style="margin-top:18px">
         <figure class="wide auto">
           <a href="images/27c1e63313794a28b6ded08d97ef29c1.png" target="_blank" rel="noopener">
             <img src="images/27c1e63313794a28b6ded08d97ef29c1.png" alt="Completed course migration tasks in Basecamp, client names blurred" loading="lazy">
@@ -465,14 +449,35 @@
           <figcaption><b>Course migrations to Shopify</b>Courses moved into Tevello for 25 customers from 13 platforms, including Kajabi, Teachable, Podia, Courses Plus, LearnDash, WordPress, systeme.io, Zenler, ThriveCart, Webflow, Kartra and Thinkific. The largest covered 67 courses and 1,445 videos (1.12 TB). Shown: completed tasks in Basecamp, client names blurred.</figcaption>
         </figure>
       </div>
-      <div class="shots" style="margin-top:18px">
-        <figure class="wide auto">
+      <details class="more">
+        <summary>4 more from Tevello</summary>
+        <div class="shots" style="margin-top:18px">
+          <figure>
+          <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">
+            <img src="images/630e6da23cd74a1f8b851fa9aafe548e.jpg" alt="Tevello Help Center tutorial video playlist on YouTube" loading="lazy">
+          </a>
+          <figcaption><b>Tutorial videos on YouTube</b>Step-by-step videos for the help center, posted to Tevello's YouTube channel. <a href="https://www.youtube.com/playlist?list=PLlJa7x_VmK1CvtVUTbUZo5yySTijfJFF1" target="_blank" rel="noopener">Watch the playlist →</a></figcaption>
+        </figure>
+          <figure class="wide">
+          <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">
+            <img src="images/59bbda6987414e399ccb31ad26e0e7db.jpg" alt="Tevello success stories page" loading="lazy">
+          </a>
+          <figcaption><b>Customer success stories</b>All 10 success stories on tevello.com, written from client interviews and reused in newsletters and on landing pages. <a href="https://tevello.com/success-stories" target="_blank" rel="noopener">Read the stories →</a></figcaption>
+        </figure>
+          <figure class="tall">
+          <a href="images/486174d780434be294daf7c5bb1ec073.png" target="_blank" rel="noopener">
+            <img src="images/486174d780434be294daf7c5bb1ec073.png" alt="Tevello monthly customer newsletter" loading="lazy">
+          </a>
+          <figcaption><b>Monthly customer newsletter</b>Written every month since Nov 2024: product tips, a feature spotlight and a customer case study. It brought clients forward to test beta features and join interviews. Click to see the full issue.</figcaption>
+        </figure>
+          <figure class="wide auto">
           <a href="images/544fa216600d408ca1046c98ba13bce4.png" target="_blank" rel="noopener">
             <img src="images/544fa216600d408ca1046c98ba13bce4.png" alt="Claude workspace with projects, connectors and custom skills" loading="lazy">
           </a>
           <figcaption><b>AI-assisted operations</b>My Claude setup: projects for the newsletter, help desk, app listing report and case studies, connectors to Tevello, Shopify, Basecamp, Google Sheets, Canva and Metricool, and custom skills. Used with ChatGPT and MCP connectors for content drafting, integration testing and reporting.</figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
       <h3 class="subhead">Bluewater Cruising: member onboarding and GoHighLevel support</h3>
       <div class="shots">
@@ -518,13 +523,18 @@
           </a>
           <figcaption><b>YouTube and Google ad reporting</b>The same dashboard's Google and YouTube side: impressions, CPM, CPC, CPV, view rate, watch time and engagements, written up as a recurring report.</figcaption>
         </figure>
-        <figure>
+      </div>
+      <details class="more">
+        <summary>1 more from media buying</summary>
+        <div class="shots" style="margin-top:18px">
+          <figure>
           <a href="images/xfactor-ad-planning-sheet.png" target="_blank" rel="noopener">
             <img src="images/xfactor-ad-planning-sheet.png" alt="Ad planning sheet with audience, objective, budget, copy variants and UTM parameters" loading="lazy">
           </a>
           <figcaption><b>Ad planning and UTM tracking</b>How each ad was briefed before launch: audience, objective, daily budget, body copy and headline variants, with UTM source, medium, campaign and content set per ad so results tied back to the report.</figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
 
       <h3 class="subhead">Xfactor Method: funnels and GoHighLevel automation</h3>
       <div class="shots">
@@ -542,7 +552,11 @@
           <noscript><img src="images/5d2435cd2d2248b797b8dd54e21f9752.poster.jpg" alt="GoHighLevel webinar registration workflow"></noscript>
           <figcaption><b>Webinar registration workflow</b>Tags registrants, sends confirmation emails and branches reminders by session date.</figcaption>
         </figure>
-        <figure>
+      </div>
+      <details class="more">
+        <summary>3 more from Xfactor funnels and automation</summary>
+        <div class="shots" style="margin-top:18px">
+          <figure>
           <video class="shot-vid" autoplay loop muted playsinline preload="none"
                  poster="images/0885c433cc4a48898d661b5e0e82aec3.poster.jpg" aria-label="GoHighLevel bootcamp opt-in and abandoned checkout workflow">
             <source src="images/0885c433cc4a48898d661b5e0e82aec3.mp4" type="video/mp4">
@@ -550,19 +564,20 @@
           <noscript><img src="images/0885c433cc4a48898d661b5e0e82aec3.poster.jpg" alt="GoHighLevel bootcamp opt-in and abandoned checkout workflow"></noscript>
           <figcaption><b>Bootcamp opt-in and abandoned checkout</b>Triggered by a form opt-in, adds contacts to a Facebook audience and follows up on unfinished checkouts.</figcaption>
         </figure>
-        <figure>
+          <figure>
           <a href="images/8149b2b4fd064715bddc95535a160c9a.png" target="_blank" rel="noopener">
             <img src="images/8149b2b4fd064715bddc95535a160c9a.png" alt="GoHighLevel bootcamp abandoned cart survey workflow" loading="lazy">
           </a>
           <figcaption><b>Abandoned cart survey</b>Logs survey answers from bootcamp cart abandoners to Google Sheets for follow-up.</figcaption>
         </figure>
-        <figure>
+          <figure>
           <a href="images/c27f6571b6884c90b518018027a8af9a.png" target="_blank" rel="noopener">
             <img src="images/c27f6571b6884c90b518018027a8af9a.png" alt="List of GoHighLevel workflows for the apprenticeship program" loading="lazy">
           </a>
           <figcaption><b>Apprenticeship program workflows</b>Interest, booking, onboarding and reminder workflows for one program, organised in a single folder.</figcaption>
         </figure>
-      </div>
+        </div>
+      </details>
     </div>
   </section>
 
