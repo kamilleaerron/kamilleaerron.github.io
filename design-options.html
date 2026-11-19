@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Studio, lighter — Kamille Aerron De Guzman</title>
+<title>Section layouts in Mint — Kamille Aerron De Guzman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{font-family:Inter,system-ui,sans-serif;background:#efeee9}
+  body{font-family:Inter,system-ui,sans-serif;background:#e9f2ee}
   #stage{min-height:100vh}
   img{max-width:100%;display:block}
 
@@ -28,135 +28,187 @@
   .proto-picker-divider{width:1px;height:16px;margin:0 4px;background:rgba(255,255,255,.12)}
   .proto-picker-replay{padding:0 10px;font-size:14px}
 
-  @keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-  .r{animation:rise .62s cubic-bezier(.16,1,.3,1) both}
+  @keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .r{animation:rise .6s cubic-bezier(.16,1,.3,1) both}
   @media (prefers-reduced-motion:reduce){.r{animation:none}}
 
-  /* ======== shared Studio bones: same layout, three grounds ======== */
-  .sx{padding-bottom:150px}
-  .sx .bar{display:flex;justify-content:space-between;align-items:center;padding:24px 36px;font-size:14px}
-  .sx .bar b{font-weight:600}
-  .sx .wrap{max-width:1180px;margin:0 auto;padding:0 36px}
-  .sx h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(50px,10.2vw,138px);line-height:.88;letter-spacing:-.045em;margin:52px 0 0}
-  .sx h1 em{font-style:normal}
-  .sx .dek{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin:46px 0 0;align-items:end}
-  .sx .dek p{margin:0;font-size:18.5px;line-height:1.6;max-width:42ch}
-  .sx .figs{display:flex;gap:44px;justify-content:flex-end;flex-wrap:wrap}
-  .sx .figs b{font-family:Fraunces,serif;font-size:50px;display:block;line-height:1}
-  .sx .figs span{font-size:13px;display:block;margin-top:7px;max-width:14ch}
-  .sx .shot{margin:100px 0 0;position:relative}
-  .sx .shot img{width:100%;border-radius:10px}
-  .sx .shot .tag{position:absolute;left:0;bottom:-16px;font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px}
-  .sx .cap{margin:42px 0 0;display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
-  .sx .cap h3{font-family:Fraunces,serif;font-size:26px;margin:0;font-weight:600}
-  .sx .cap p{margin:0;font-size:16.5px;line-height:1.62}
-  .sx .svc{margin:120px 0 0;padding-top:16px}
-  .sx .svc div{display:grid;grid-template-columns:1fr 1.5fr;gap:36px;padding:26px 0}
-  .sx .svc h4{margin:0;font-size:20px;font-weight:600}
-  .sx .svc p{margin:0;font-size:16px;line-height:1.6}
-  @media(max-width:760px){.sx .dek,.sx .cap,.sx .svc div{grid-template-columns:1fr;gap:20px}.sx .figs{justify-content:flex-start;gap:30px}.sx .wrap{padding:0 22px}.sx .bar{padding:20px 22px}}
+  /* ============ MINT tokens, identical in all three ============ */
+  .m{--bg:#e9f2ee;--ink:#0f2621;--dim:#4d6760;--accent:#0a5e4c;--line:#cfe0d9;
+     background:var(--bg);color:var(--ink);padding-bottom:150px}
+  .m .wrap{max-width:1140px;margin:0 auto;padding:0 36px}
+  .m .bar{display:flex;justify-content:space-between;align-items:center;padding:24px 36px;font-size:14px;color:var(--dim)}
+  .m .bar b{color:var(--ink);font-weight:600}
+  .m h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(44px,8vw,104px);line-height:.9;letter-spacing:-.045em;margin:44px 0 0}
+  .m h1 em{font-style:normal;color:var(--accent)}
+  .m .dek{font-size:18px;line-height:1.6;color:var(--dim);max-width:44ch;margin:30px 0 0}
+  .m h2{font-family:Fraunces,serif;font-weight:600;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.03em;margin:0 0 30px;line-height:1.05}
+  .m .tag{display:inline-block;background:var(--ink);color:#d9efe7;font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:999px}
+  .m figure{margin:0}
+  .m figure img{width:100%;border-radius:9px}
+  .m figcaption{margin-top:14px}
+  .m figcaption b{display:block;font-family:Fraunces,serif;font-size:19px;margin-bottom:5px}
+  .m figcaption span{color:var(--dim);font-size:15px;line-height:1.55}
+  .m .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+  .m .chips li{background:#d7e8e1;color:var(--accent);border-radius:999px;padding:6px 13px;font-size:14px;font-weight:500}
+  .m .when{color:var(--dim);font-size:14px;white-space:nowrap}
+  .m .org{color:var(--accent);font-weight:600;font-size:15px;margin:4px 0 12px}
+  .m ul.bul{margin:0;padding-left:19px;color:var(--dim);font-size:15.5px;line-height:1.6}
+  .m ul.bul li{margin-bottom:6px}
+  .m .sec{margin-top:118px}
 
-  /* ---- A. Paper: warm off-white, deep teal ---- */
-  .sa{--bg:#faf8f3;--ink:#13201c;--dim:#5d6b66;--accent:#0d6b57;background:var(--bg);color:var(--ink)}
-  .sa .bar{color:var(--dim)} .sa .bar b{color:var(--ink)}
-  .sa h1 em{color:var(--accent)}
-  .sa .dek p,.sa .cap p,.sa .svc p,.sa .figs span{color:var(--dim)}
-  .sa .figs b{color:var(--accent)}
-  .sa .shot .tag{background:var(--accent);color:#fff}
-  .sa .svc{border-top:1px solid #e2e0d8}
-  .sa .svc div{border-bottom:1px solid #e2e0d8}
+  /* ---- A. Stacked: every section full width, one after another ---- */
+  .a1 .job{padding:30px 0;border-top:1px solid var(--line)}
+  .a1 .job .top{display:flex;justify-content:space-between;align-items:baseline;gap:20px}
+  .a1 .job h3{font-family:Fraunces,serif;font-size:25px;margin:0;font-weight:600}
+  .a1 .job .cols{columns:2;column-gap:46px;margin-top:10px}
+  .a1 .plates{display:grid;gap:70px}
+  .a1 .plates figcaption{display:grid;grid-template-columns:1fr 1.6fr;gap:30px;align-items:start}
+  @media(max-width:760px){.a1 .job .cols{columns:1}.a1 .plates figcaption{grid-template-columns:1fr;gap:6px}}
 
-  /* ---- B. Mint: pale green field, more colour ---- */
-  .sb{--bg:#e9f2ee;--ink:#0f2621;--dim:#4d6760;--accent:#0a5e4c;background:var(--bg);color:var(--ink)}
-  .sb .bar{color:var(--dim)} .sb .bar b{color:var(--ink)}
-  .sb h1 em{color:var(--accent)}
-  .sb .dek p,.sb .cap p,.sb .svc p,.sb .figs span{color:var(--dim)}
-  .sb .figs b{color:var(--accent)}
-  .sb .shot img{box-shadow:0 1px 0 rgba(10,94,76,.14)}
-  .sb .shot .tag{background:var(--ink);color:#d9efe7}
-  .sb .svc{border-top:1px solid #cfe0d9}
-  .sb .svc div{border-bottom:1px solid #cfe0d9}
+  /* ---- B. Split: sticky section label left, content right ---- */
+  .a2 .split{display:grid;grid-template-columns:230px 1fr;gap:56px;align-items:start}
+  .a2 .split > h2{position:sticky;top:28px;margin:0;font-size:clamp(24px,2.6vw,33px)}
+  .a2 .job{padding:24px 0;border-bottom:1px solid var(--line)}
+  .a2 .job h3{font-family:Fraunces,serif;font-size:21px;margin:0 0 2px;font-weight:600}
+  .a2 .shots{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .a2 .skillrow{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+  .a2 .skillrow h4{margin:0;font-size:16px;font-weight:600}
+  @media(max-width:860px){.a2 .split{grid-template-columns:1fr;gap:22px}.a2 .split > h2{position:static}.a2 .shots,.a2 .skillrow{grid-template-columns:1fr}}
 
-  /* ---- C. Bands: light page, dark only where the work is ---- */
-  .sc{--bg:#f7f6f2;--ink:#14201d;--dim:#5b6a65;--accent:#0d6b57;background:var(--bg);color:var(--ink)}
-  .sc .bar{color:var(--dim)} .sc .bar b{color:var(--ink)}
-  .sc h1 em{color:var(--accent)}
-  .sc .dek p,.sc .figs span{color:var(--dim)}
-  .sc .figs b{color:var(--accent)}
-  .sc .band{background:#0d1513;color:#eef2f0;margin-top:110px;padding:84px 0 96px}
-  .sc .band .shot{margin-top:0}
-  .sc .band .shot + .shot{margin-top:96px}
-  .sc .band .cap h3{color:#fff}
-  .sc .band .cap p{color:#93a09b}
-  .sc .band .tag{background:#5fd3b2;color:#06211a}
-  .sc .svc{border-top:1px solid #e3e1d9}
-  .sc .svc div{border-bottom:1px solid #e3e1d9}
-  .sc .svc p{color:var(--dim)}
+  /* ---- C. By client: role, bullets and its screenshots in one block ---- */
+  .a3 .client{margin-top:104px;padding-top:30px;border-top:2px solid var(--ink)}
+  .a3 .client .head{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .a3 .client h3{font-family:Fraunces,serif;font-size:clamp(26px,3.4vw,40px);margin:0;font-weight:600;letter-spacing:-.02em}
+  .a3 .client .body{display:grid;grid-template-columns:1fr 1.45fr;gap:50px;margin-top:26px;align-items:start}
+  .a3 .client .shots{display:grid;gap:34px}
+  @media(max-width:860px){.a3 .client .body{grid-template-columns:1fr;gap:28px}}
 </style>
 </head>
 <body>
 
 <div id="stage"></div>
 
-<nav class="proto-picker" aria-label="Prototype variants">
+<nav class="proto-picker" aria-label="Section layout variants">
   <span class="proto-picker-highlight" aria-hidden="true"></span>
-  <button class="proto-picker-item" data-active aria-current="true">Paper</button>
-  <button class="proto-picker-item">Mint</button>
-  <button class="proto-picker-item">Bands</button>
+  <button class="proto-picker-item" data-active aria-current="true">Stacked</button>
+  <button class="proto-picker-item">Split</button>
+  <button class="proto-picker-item">By client</button>
   <span class="proto-picker-divider" aria-hidden="true"></span>
   <button class="proto-picker-item proto-picker-replay" aria-label="Replay animation (R)">↻</button>
 </nav>
 
 <script>
-const IMG = {
+const I = {
   ads:    'images/xfactor-meta-ads-manager.png',
   report: 'images/a4f5c14f59dd4ba1a0cb78e819d985bd.jpg',
-  help:   'images/ccc3aa7cd38f493d93568e855cd219b0.jpg'
+  help:   'images/ccc3aa7cd38f493d93568e855cd219b0.jpg',
+  click:  'images/bluewater-onboarding-templates.png'
 };
 
-const BAR = `
-  <div class="bar"><b>Kamille De Guzman</b><span>Remote &middot; Philippines</span></div>`;
-
-const HERO = `
+const HEAD = `
+  <div class="bar"><b>Kamille De Guzman</b><span>Remote &middot; Philippines</span></div>
+  <div class="wrap">
     <h1 class="r">Marketing ops<br>that <em>holds up</em><br>under audit.</h1>
-    <div class="dek">
-      <p class="r" style="animation-delay:.1s">I run marketing operations for founder-led SaaS and online course businesses — course migrations onto Shopify, help center content, customer stories, and the weekly numbers behind them.</p>
-      <div class="figs r" style="animation-delay:.18s">
-        <div><b>25</b><span>customers migrated</span></div>
-        <div><b>52</b><span>help articles</span></div>
-        <div><b>13</b><span>platforms</span></div>
-      </div>
-    </div>`;
+    <p class="dek r" style="animation-delay:.1s">I run marketing operations for founder-led SaaS and online course businesses — course migrations onto Shopify, help center content, customer stories, and the weekly numbers behind them.</p>`;
 
-const SHOTS = `
-    <div class="shot r" style="animation-delay:.26s">
-      <img src="${IMG.ads}" alt="Meta Ads Manager campaign view" loading="lazy">
-      <span class="tag">Media buying &middot; Xfactor Method</span>
-    </div>
-    <div class="cap r"><h3>Meta ad account</h3><p>293 campaigns tracked on results, frequency, reach, CPM, CPC, CTR and ThruPlays, with the reporting dashboard built alongside it in Sheets. Campaign names blurred.</p></div>
+const fig = (src, alt, title, text) =>
+  `<figure class="r"><img src="${src}" alt="${alt}" loading="lazy"><figcaption><b>${title}</b><span>${text}</span></figcaption></figure>`;
 
-    <div class="shot r"><img src="${IMG.report}" alt="Weekly SaaS metrics report" loading="lazy">
-      <span class="tag">Reporting &middot; Tevello</span>
-    </div>
-    <div class="cap r"><h3>Weekly SaaS report</h3><p>Subscriptions, churn and MRR, plus the app listing to trial to paid funnel. It surfaced a churn issue that became a feature recommendation.</p></div>`;
+const JOBS = [
+  ['Digital Marketing and Operations Specialist','Tevello LLC &middot; Shopify app for online courses','Mar 2024 – Oct 2026',
+   ['Migrated courses from 13 platforms for 25 customers; the largest covered 67 courses and 1,445 videos.',
+    'Wrote all 52 help center articles, plus internal SOPs and setup guides.',
+    'Built the weekly SaaS metrics and funnel report from Mantle and Google Sheets.',
+    'Write the monthly customer newsletter since Nov 2024.']],
+  ['CRM and Onboarding Systems Support','Bluewater Cruising &middot; membership programs','Jul 2025 – Oct 2026',
+   ['Member onboarding and upgrades through ClickUp checklists from 6 templates.',
+    'Completed Phase 1 of a GoHighLevel audit: merged duplicates, standardized tags and fields.',
+    'Built smart lists by program and imported contacts with record counts matched.']],
+  ['Digital Marketing Specialist and Client Success Manager','Enlightened Profits &middot; Xfactor Method SaaS','Jun 2022 – Mar 2024',
+   ['Ran media buying on Meta, Google, YouTube and TikTok, and built the ads reporting dashboard.',
+    'Built 9 lead generation funnels in GoHighLevel and Swipe Pages.',
+    'Onboarded 10 clients onto a white-labeled GoHighLevel platform.']]
+];
 
-const SVC = `
-    <div class="svc">
-      <div><h4>Operations and SaaS reporting</h4><p>Weekly KPI and funnel reports that show founders what changed and what needs attention.</p></div>
-      <div><h4>CRM management and cleanup</h4><p>GoHighLevel audits, segmentation and reconciling records against your sheets.</p></div>
-      <div><h4>Course migration and onboarding</h4><p>Courses and members onto Shopify from Kajabi, Teachable, Podia and others.</p></div>
-    </div>`;
-
-const flat = cls => `<div class="sx ${cls}">${BAR}<div class="wrap">${HERO}${SHOTS}${SVC}</div></div>`;
+const SKILLS = [
+  ['CRM and data', ['GoHighLevel','Google Sheets']],
+  ['Course platforms', ['Tevello','Shopify','Kajabi','Teachable','Podia']],
+  ['Onboarding and docs', ['ClickUp','Google Sheets','GoHighLevel']],
+  ['Content and email', ['Canva','Metricool','LinkedIn']],
+  ['AI in daily work', ['Claude','ChatGPT','MCP connectors']],
+  ['Operations', ['Mantle','Basecamp','ClickUp','Google Sheets']]
+];
 
 const variants = [
-  () => flat('sa'),
-  () => flat('sb'),
-  () => `<div class="sx sc">${BAR}
-      <div class="wrap">${HERO}</div>
-      <div class="band"><div class="wrap">${SHOTS}</div></div>
-      <div class="wrap">${SVC}</div>
-    </div>`
+
+/* ---------- A. STACKED ---------- */
+() => `<div class="m a1">${HEAD}
+  <div class="sec">
+    <h2 class="r">Where I've worked</h2>
+    ${JOBS.map(([role,org,when,bul]) => `
+      <div class="job r"><div class="top"><h3>${role}</h3><span class="when">${when}</span></div>
+        <p class="org">${org}</p>
+        <div class="cols"><ul class="bul">${bul.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+      </div>`).join('')}
+  </div>
+  <div class="sec">
+    <h2 class="r">Selected work</h2>
+    <div class="plates">
+      ${fig(I.ads,'Meta Ads Manager','Meta ad account','293 campaigns tracked on results, reach, CPM, CPC, CTR and ThruPlays, with the reporting dashboard built alongside it.')}
+      ${fig(I.report,'Weekly SaaS report','Weekly SaaS report','Subscriptions, churn and MRR, plus the app listing to trial to paid funnel. It surfaced a churn issue that became a feature recommendation.')}
+      ${fig(I.help,'Tevello help center','The help center','All 52 published articles across Get Started, Courses, Communities and Members, with screenshots and tutorial videos.')}
+    </div>
+  </div>
+  <div class="sec">
+    <h2 class="r">What I work with</h2>
+    <ul class="chips r">${SKILLS.flatMap(([,t])=>t).filter((v,i,a)=>a.indexOf(v)===i).map(t=>`<li>${t}</li>`).join('')}</ul>
+  </div>
+</div></div>`,
+
+/* ---------- B. SPLIT ---------- */
+() => `<div class="m a2">${HEAD}
+  <div class="sec split"><h2 class="r">Where I've worked</h2>
+    <div>${JOBS.map(([role,org,when,bul]) => `
+      <div class="job r"><h3>${role}</h3><p class="org">${org} &middot; <span class="when">${when}</span></p>
+        <ul class="bul">${bul.map(b=>`<li>${b}</li>`).join('')}</ul></div>`).join('')}
+    </div>
+  </div>
+  <div class="sec split"><h2 class="r">Selected work</h2>
+    <div class="shots">
+      ${fig(I.ads,'Meta Ads Manager','Meta ad account','293 campaigns tracked on results, reach, CPM, CPC and ThruPlays.')}
+      ${fig(I.report,'Weekly SaaS report','Weekly SaaS report','Subscriptions, churn and MRR from Mantle and Google Sheets.')}
+      ${fig(I.help,'Tevello help center','The help center','All 52 articles, with screenshots and tutorial videos.')}
+      ${fig(I.click,'ClickUp onboarding templates','Onboarding templates','Member onboarding checklists from 6 ClickUp templates.')}
+    </div>
+  </div>
+  <div class="sec split"><h2 class="r">What I work with</h2>
+    <div>${SKILLS.map(([g,t])=>`<div class="skillrow r"><h4>${g}</h4><ul class="chips">${t.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div>
+  </div>
+</div></div>`,
+
+/* ---------- C. BY CLIENT ---------- */
+() => `<div class="m a3">${HEAD}
+  ${[
+    ['Tevello','Digital Marketing and Operations Specialist','Mar 2024 – Oct 2026',JOBS[0][3],
+      fig(I.report,'Weekly SaaS report','Weekly SaaS report','Subscriptions, churn and MRR, plus the app listing to trial to paid funnel.') +
+      fig(I.help,'Tevello help center','The help center','All 52 published articles, with screenshots and tutorial videos.')],
+    ['Bluewater Cruising','CRM and Onboarding Systems Support','Jul 2025 – Oct 2026',JOBS[1][3],
+      fig(I.click,'ClickUp onboarding templates','Onboarding templates','Member onboarding checklists from 6 ClickUp templates.')],
+    ['Xfactor Method','Digital Marketing Specialist and Client Success Manager','Jun 2022 – Mar 2024',JOBS[2][3],
+      fig(I.ads,'Meta Ads Manager','Meta ad account','293 campaigns tracked on results, reach, CPM, CPC, CTR and ThruPlays.')]
+  ].map(([name,role,when,bul,shots]) => `
+    <div class="client r">
+      <div class="head"><h3>${name}</h3><span class="when">${role} &middot; ${when}</span></div>
+      <div class="body">
+        <ul class="bul">${bul.map(b=>`<li>${b}</li>`).join('')}</ul>
+        <div class="shots">${shots}</div>
+      </div>
+    </div>`).join('')}
+  <div class="sec">
+    <h2 class="r">What I work with</h2>
+    <ul class="chips r">${SKILLS.flatMap(([,t])=>t).filter((v,i,a)=>a.indexOf(v)===i).map(t=>`<li>${t}</li>`).join('')}</ul>
+  </div>
+</div></div>`
 ];
 
 /* --- picker wiring (verbatim from PICKER.md) --- */
@@ -175,6 +227,8 @@ function moveHighlight() {
 function mount(i) {
   stage.innerHTML = '';
   requestAnimationFrame(() => { stage.innerHTML = variants[i](); });
+  // Guard: if frames are throttled (background tab), render anyway rather than show blank.
+  setTimeout(() => { if (!stage.innerHTML) stage.innerHTML = variants[i](); }, 250);
 }
 function setActive(i) {
   if (i < 0 || i >= variants.length) return;
