@@ -112,6 +112,8 @@
   .shots { display: block; }
   .shots > figure:first-child { margin-bottom: 26px; }
   .rest { columns: 2; column-gap: 22px; }
+  .rest.pair { columns: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+  .rest.pair > figure { display: block; width: auto; margin: 0; }
   .rest > figure { break-inside: avoid; -webkit-column-break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 22px; }
   figure video.shot-vid { width: 100%; display: block; background: #0f1113; }
   figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
@@ -143,7 +145,7 @@
   .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
   .tools span { background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; font-size: 14px; color: var(--muted); }
 
-  .marquee { margin: 46px calc(50% - 50vw) 0; width: 100vw; overflow: hidden; white-space: nowrap;
+  .marquee { margin: 46px 0 0; overflow: hidden; white-space: nowrap;
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
             mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
   .track { display: inline-flex; gap: 12px; animation: slide 38s linear infinite; }
@@ -179,6 +181,7 @@
     .stats { grid-template-columns: 1fr; gap: 14px; }
     .grid, .grid.two, .services, .skills-grid { grid-template-columns: 1fr; }
     .rest { columns: 1; }
+    .rest.pair { grid-template-columns: 1fr; }
     .contact { padding: 36px 22px; }
     section { padding: 56px 0; }
   }
@@ -372,9 +375,7 @@
         <div class="stat"><b>13</b><span>platforms migrated from</span></div>
       </div>
     </div>
-    <div class="wrap">
-      <div class="marquee"><div class="track"><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span></div></div>
-    </div>
+    <div class="marquee"><div class="track"><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span><span>GoHighLevel</span><span>Shopify</span><span>Tevello</span><span>ThriveCart</span><span>Kajabi</span><span>Teachable</span><span>Podia</span><span>Mantle</span><span>Google Sheets</span><span>Google Workspace</span><span>ClickUp</span><span>Basecamp</span><span>Canva</span><span>Metricool</span><span>Claude</span><span>ChatGPT</span><span>MCP connectors</span></div></div>
   </section>
 
   <section id="experience">
@@ -494,7 +495,7 @@
           <noscript><img src="images/bluewater-ghl-smart-lists.poster.jpg" alt="Screen recording of GoHighLevel smart lists for member programs, with contact details blurred"></noscript>
           <figcaption><b>GoHighLevel smart lists</b>Smart lists I worked on to segment members by program and year, with separate lists for partners. Each list runs on saved filters. Contact details are blurred.</figcaption>
         </figure>
-        <div class="rest">
+        <div class="rest pair">
           <figure class="tall fit">
           <a href="images/bluewater-onboarding-templates.png" target="_blank" rel="noopener">
             <img src="images/bluewater-onboarding-templates.png" alt="ClickUp list of six member onboarding templates with their checklist steps" loading="lazy">
